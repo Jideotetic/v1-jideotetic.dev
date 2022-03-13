@@ -25,9 +25,9 @@ header {
 .resume-title {
 
    border: 1px solid pink;
-   padding: 10px 0 0 10px;
+   
    height: 100%;
-   margin: 10px auto;
+   margin: 10px;
    width: 100%;
 }
 
@@ -35,9 +35,9 @@ header {
 
    border: 1px solid pink;
    height: 100%;
-   margin: 10px auto;
+   margin: 10px;
    width: 100%;
-   padding: 10px 0 10px 10px;
+   
 }
 
 main {
