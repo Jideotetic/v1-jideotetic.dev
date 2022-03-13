@@ -9,6 +9,7 @@ body {
 
 a {
    text-decoration: none;
+    color: white;
 }
 
 header {
@@ -27,7 +28,7 @@ header {
    border: 1px solid pink;
    
    height: 100%;
-   margin: 10px;
+   margin: 10px 0 10px 0;
    width: 100%;
 }
 
@@ -35,7 +36,7 @@ header {
 
    border: 1px solid pink;
    height: 100%;
-   margin: 10px;
+   margin: 10px 0 10px 0;
    width: 100%;
    
 }
