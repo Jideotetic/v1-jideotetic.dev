@@ -19,6 +19,14 @@ a {
     text-decoration: none;
 }
 
+.resume-title {
+    padding-left: 20px;
+}
+
+.contact-address {
+    padding-left: 20px;
+}
+
 main {
     background-color: grey;
     color: blue;
