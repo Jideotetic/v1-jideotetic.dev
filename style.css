@@ -9,7 +9,7 @@ body {
 header {
     background-color: blue;
     color: white;
-    padding: 10px;
+    padding: 10px 0 10px 10px;
     width: 100%;
     height: 100%;
 }
@@ -23,7 +23,7 @@ main {
     background-color: grey;
     color: blue;
     display: flex;
-    padding-right: 10px;
+
 }
 
 .aside1 {
@@ -59,7 +59,7 @@ main {
 footer {
     background-color: blue;
     color: white;
-    padding: 10px;
+    padding: 10px 0 10px 10px;
     width: 100%;
     height: 100%;;
 }
