@@ -22,13 +22,13 @@ header {
 
 .resume-title {
    padding: 10px 0 0 0;
-   height: 100%;
+   height: 50%;
    margin: 10px auto;
    width: 100%;
 }
 
 .contact-address {
-   height: 100%;
+   height: 50%;
    margin: 10px auto 10px auto;
    width: 100%;
    padding: 10px 0 10px 0;
@@ -43,38 +43,38 @@ main {
 
 .profile-heading {
    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
-   height: 25px;
+   height: 100%;
    margin: 10px auto 10px auto;
-   width: 50%;
+   width: 100%;
    text-align: center;
 }
 
 .profile-details {
-   height: 55px;
+   height: 100%;
    margin: 10px auto 10px auto;
-   width: 35%;
+   width: 100%;
    text-align: center;
 }
 
 .experience {
-   height: 260px;
+   height: 100%;
    margin: 10px 0 10px 0;
    width: 100%;
    text-align: center;
 }
 
 .experience-heading {
-   border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
-   height: 25px;
+   border-bottom: 0.5px solid black;
+   height: 100%;
    margin: 10px auto 10px auto;
-   width: 90%;
+   width: 100%;
    padding: 10px 0 0 0;
-   padding: 10px 0 0 0;
+
 }
 
 .algorithm {
-   height: 180px;
-   width: 45%;
+   height: 100%;
+   width: 100%;
    margin: 10px 20px 10px 20px;
 }
 
@@ -83,8 +83,8 @@ li {
 }
 
 .ecart {
-   height: 180px;
-   width: 45%;
+   height: 100%;
+   width: 100%;
    margin: 10px 20px 10px 20px;
 }
 
@@ -92,38 +92,38 @@ ul {
    padding: 0;
 }
 
-.experience-float {
+/*.experience-float {
    float: left;
-}
+}*/
 
 .education-cert-skills {
-   height: 200px;
+   height: 100%;
    margin: 10px 0 10px 0;
    width: 100%;
    text-align: center;
 }
 
 .education {
-   height: 170px;
+   height: 100%;
    margin: 10px 20px 10px 20px;
-   width: 30%;
+   width: 100%;
 }
 
 .certifications {
-   height: 170px;
+   height: 100%;
    margin: 10px 20px 10px 20px;
-   width: 30%;
+   width: 100%;
 }
 
 .skills {
-   height: 170px;
+   height: 100%;
    margin: 10px 20px 10px 20px;
-   width: 30%;
+   width: 100%;
 }
 
-.education-cert-skills-float {
+/*.education-cert-skills-float {
    float: left;
-}
+}*/
 
 footer {
    border:1px solid pink;
