@@ -19,6 +19,7 @@ header {
    text-align: center;
    background-color: blue;
    color: white;
+   float: left;
 }
 
 .resume-title {
