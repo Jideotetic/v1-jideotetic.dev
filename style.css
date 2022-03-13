@@ -23,6 +23,7 @@ main {
     background-color: yellow;
     color: blue;
     display: flex;
+    
 }
 
 .aside1 {
@@ -39,7 +40,9 @@ main {
     height: 100%;
     
 }
-
+.aside {
+   flex: auto;
+}
 footer {
     background-color: blue;
     color: white;
