@@ -22,7 +22,7 @@ a {
 main {
     background-color: yellow;
     color: blue;
-    
+    display: flex;
 }
 
 .aside1 {
