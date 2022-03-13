@@ -12,9 +12,9 @@ a {
 }
 
 header {
-
+   border: 1px solid pink;
    padding: 10px 0 10px 0;
-   height: 150px;
+   height: 100%
    width: 100%;
    text-align: center;
 }
@@ -34,8 +34,8 @@ header {
 }
 
 main {
-
-   height: 600px;
+   border: 1px solid pink;
+   height: 100%
    width: 100%;
    padding: 10px 0 10px 0;
 }
@@ -125,8 +125,8 @@ ul {
 }
 
 footer {
-   border:1px solid white;
-   height: 70px;
+   border:1px solid pink;
+   height: 100%
    width: 100%;
    background-color: rgba(0
    text-align: center;
