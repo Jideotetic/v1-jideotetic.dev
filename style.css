@@ -14,7 +14,7 @@ a {
 header {
    border: 1px solid pink;
    padding: 10px 10px 10px 10px;
-   height: 100%
+   height: 100%;
    width: 100%;
    text-align: center;
    background-color: blue;
