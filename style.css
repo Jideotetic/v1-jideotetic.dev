@@ -17,19 +17,24 @@ header {
    height: 100%
    width: 100%;
    text-align: center;
-   background-color: yellow;
+   background-color: blue;
+   color: white;
 }
 
 .resume-title {
+
+   border: 1px solid pink;
    padding: 10px 0 0 0;
-   height: 50%;
+   height: 100%;
    margin: 10px auto;
    width: 100%;
 }
 
 .contact-address {
-   height: 50%;
-   margin: 10px auto 10px auto;
+
+   border: 1px solid pink;
+   height: 100%;
+   margin: 10px auto;
    width: 100%;
    padding: 10px 0 10px 0;
 }
