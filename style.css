@@ -27,7 +27,7 @@ main {
 }
 
 .aside1 {
-    background-color: red;
+    background-color: white;
     padding: 10px;
     width: 50%;
     height: 100%;
@@ -43,6 +43,19 @@ main {
 .aside {
    flex: auto;
 }
+
+.profile-heading {
+   border-bottom: 1px solid blue;
+}
+
+.experience-heading {
+   border-bottom: 1px solid blue;
+}
+
+.education-heading {
+   border-bottom: 1px solid blue;
+}
+
 footer {
     background-color: blue;
     color: white;
