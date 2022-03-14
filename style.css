@@ -26,6 +26,7 @@ li {
 
 .resume-title {
    padding-left: 20px;
+   font-size: 35px;
 }
 
 .contact-address {
@@ -87,15 +88,16 @@ main {
    background-color: white;
    padding: 10px;
    width: 60%;
-   height: 100%;
+   height: 600px;
 }
 
 .aside2 {
-   background-color: background-color: rgba(0, 0, 255, 0.6);
+   background-color: rgba(0, 0, 255, 0.3);
+   color: rgba(255, 255, 255, 1);
    padding: 10px 10px 10px 10px;
    width: 40%;
    height: 600px;
-   color: white;
+   
 }
 .aside {
   flex: auto;
