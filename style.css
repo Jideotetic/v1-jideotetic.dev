@@ -6,14 +6,6 @@ body {
    font-family: monospace;
 }
 
-header {
-   background-color: rgba(0, 0, 255, 0.6);
-   color: rgba(255, 255, 255, 1);
-   padding: 10px 0 10px 0;
-   width: 100%;
-   height: 100%;
-}
-
 a {
    color: rgba(255, 255, 255, 1);
    text-decoration: none;
@@ -21,86 +13,18 @@ a {
 
 li {
    list-style-type: circle;
-   padding-left: 20px;
 }
 
-.resume-title {
-   padding-left: 20px;
-   font-size: 35px;
-}
-
-.contact-address {
-   padding-left: 20px;
+header {
+   background-color: rgba(0, 0, 255, 0.6);
+   color: rgba(255, 255, 255, 1);
+   padding: 10px;
 }
 
 main {
-   background-color: grey;
-   color: rgba(0, 0, 255, 0.9);
-   display: flex;
-   line-height: 20px;
-}
-
-.profile-heading {
-   padding-left: 20px;
-}
-
-.profile-details {
-   padding-left: 20px;
-}
-
-.experience-heading {
-   padding-left: 20px;
-}
-
-.algorithm-heading {
-   padding-left: 20px;
-}
-
-.ecart-heading {
-   padding-left: 20px;
-}
-
-.education-heading {
-   padding-left: 20px;
-}
-
-.danfodiyo {
-   padding-left: 20px;
-}
-
-.certifications-heading {
-   padding-left: 20px;
-}
-
-.skills-heading {
-   padding-left: 20px;
-}
-
-.languages-heading {
-   padding-left: 20px;
-}
-
-.tools-heading {
-   padding-left: 20px;
-}
-
-.aside1 {
    background-color: white;
+   color: rgba(0, 0, 255, 0.9);
    padding: 10px;
-   width: 60%;
-   height: 700px;
-}
-
-.aside2 {
-   background-color: rgba(0, 0, 255, 0.6);
-   color: rgba(255, 255, 255, 1);
-   padding: 10px 10px 10px 10px;
-   width: 40%;
-   height: 700px;
-   
-}
-.aside {
-  flex: auto;
 }
 
 .aside2 li {
@@ -134,8 +58,5 @@ main {
 footer {
    background-color: rgba(0, 0, 255, 0.6);
    color: white;
-   padding: 10px 0 10px 0;
-   width: 100%;
-   height: 100%;
-   text-align: center;
+   padding: 10px;
 }
