@@ -1,11 +1,19 @@
 @media (max-width: 670px) {
-    .resume-title {
-   
-   
+    main {
+        flex-direction: column;
+     }
 
+     .aside {
+         margin: 0 auto;
+     }
      
 }
 
 @media (max-width: 1000px) {
-    
+    main {
+        flex-wrap: wrap;
+    }
+    .aside {
+        width: 50px;
+    }
 }
