@@ -19,9 +19,6 @@ header {
    background-color: rgba(0, 0, 255, 0.6);
    color: rgba(255, 255, 255, 1);
    padding: 10px;
-
-
-
 }
 
 main {
@@ -62,4 +59,27 @@ footer {
    background-color: rgba(0, 0, 255, 0.6);
    color: white;
    padding: 10px;
+   text-align: center;
+}
+
+.aside1 {
+   width: 40%;
+   border: 1px solid rgba(0, 0, 255, 0.6);
+   padding: 10px;
+   border-radius: 10px;
+   box-shadow: 5px 5px rgba(0, 0, 255, 0.6);
+   margin: 0 10px 0 0;
+}
+
+.aside2 {
+   width: 30%;
+   padding: 10px;
+   margin: 0 10px 0 10px;
+   border: 1px solid rgba(0, 0, 255, 0.6);
+   box-shadow: 5px 5px rgba(0, 0, 255, 0.6);
+   border-radius: 10px;
+}
+
+main {
+   display: flex;
 }
