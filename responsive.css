@@ -2,20 +2,4 @@
    header {
       background-color: blueviolet;
    }
-   .header-image {
-      margin: 2px;
-   }
-   .header-title {
-      margin: 2px;
-   }
-   .header-title h1 {
-      font-size: 15px;
-   }
-   .header-title a {
-      font-size: 10px;
-   }
-   .header-socials {
-      margin: 2px;
-      display: grid;
-   }
 }
