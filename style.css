@@ -22,7 +22,7 @@ img {
    width: 50px;
 }
 
-/*nav {
+nav {
    display: flex;
 }
 
@@ -30,7 +30,7 @@ img {
    margin-right: 100px;
 }
 
-.header-title {
+/*.header-title {
    margin-right: 340px;
    margin-left: 340px;
    font-size: 20px;
