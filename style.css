@@ -1,105 +1,6 @@
-/** {
-   box-sizing: box-border;
+* {
+   box-sizing: border-box;
 }
-body, h1, header, nav, img, a, i {
-   margin: 0;
-   padding: 0;
-   
-}
-
-header {
-   background-color: rgba(0, 0, 255, 0.6);
-   color: rgba(255, 255, 255, 1);
-   padding: 10px;
-   height: 80px;
-   width: 100%;
-   margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-.fa-brands {
-   margin-bottom: 15px; 
-}
-
-a {
-   color: rgba(255, 255, 255, 1);
-   text-decoration: none;
-}
-
-li {
-   list-style-type: circle;
-}
-
-main {
-   background-color: white;
-   color: rgba(0, 0, 255, 0.9);
-   padding: 10px;
-}
-
-.aside2 li {
-   list-style-type: none;
-}
-
-.aside2 ul {
-   padding-left: 0;
-}
-
-.profile-heading {
-  border-bottom: 1px solid rgba(0, 0, 255, 0.6);
-}
-
-.experience-heading {
-  border-bottom: 1px solid rgba(0, 0, 255, 0.6);
-}
-
-.education-heading {
-  border-bottom: 1px solid rgba(0, 0, 255, 0.6);
-}
-
-.education-list2 {
-   list-style-type: none;
-}
-
-.education-list1 {
-   padding-left: 0;
-}
-
-footer {
-   background-color: rgba(0, 0, 255, 0.6);
-   color: white;
-   text-align: center;
-   width: 100%;
-}
-
-.aside1 {
-   width: 50%;
-   border: 1px solid rgba(0, 0, 255, 0.6);
-   padding: 10px;
-   border-radius: 10px;
-   box-shadow: 5px 5px rgba(0, 0, 255, 0.6);
-   margin: 0 10px 0 0;
-}
-
-.aside2 {
-   width: 50%;
-   padding: 10px;
-   margin: 0 10px 0 10px;
-   border: 1px solid rgba(0, 0, 255, 0.6);
-   box-shadow: 5px 5px rgba(0, 0, 255, 0.6);
-   border-radius: 10px;
-}
-
-main {
-   display: flex;
-}*/
 body, h1, a {
    margin: 0;
    padding: 0;
@@ -116,7 +17,7 @@ header {
    text-align: center;
 }
 
-img {
+/*img {
    border-radius: 50%;
    width: 50px;
 }
@@ -196,7 +97,7 @@ main {
    border-radius: 10px;
    margin: 5px;
    height: 40px;
-}
+}*/
 footer {
    width: 100%;
    height: 150px;
@@ -204,7 +105,7 @@ footer {
    padding: 20px;
    text-align: center;
 }
-aside {
+/*aside {
    display: flex;
 }
 address {
@@ -215,4 +116,4 @@ address {
 .footer-socials {
    margin-left: 550px;
    display: grid;
-}
+}*/
