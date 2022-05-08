@@ -7,10 +7,13 @@
    }
    .header-title {
       margin: 0;
+   }
+   .header-title h1 {
       font-size: 10px;
    }
    .header-socials {
       margin: 0;
+      display: grid;
    }
 }
 
