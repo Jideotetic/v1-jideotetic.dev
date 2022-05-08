@@ -26,20 +26,27 @@ nav {
    display: flex;
 }
 
-.header-image {
+/*.header-image {
    margin-right: 100px;
 }
 
 .header-title {
    margin-right: 340px;
    margin-left: 340px;
+}*/
+
+.header-title h1 {
    font-size: 20px;
 }
 
-.header-socials {
+.header-title a {
+   font-size: 12px;
+}
+
+/*.header-socials {
    margin-left: 100px;
    display: grid;
-}
+}*/
 
 .fa-brands {
    margin-bottom: 10px;
