@@ -100,17 +100,20 @@ footer {
 main {
    display: flex;
 }*/
-body, h1 {
+body, h1, a {
    margin: 0;
    padding: 0;
    font-family: monospace;
+   text-decoration: none;
+   color: grey;
 }
 
 header {
    width: 100%;
-   height: 80px;
+   height: 120px;
    background-color: rgba(222, 222, 224, 0.6);
    padding: 20px;
+   text-align: center;
 }
 
 img {
@@ -137,15 +140,79 @@ nav {
    display: grid;
 }
 
+.fa-brands {
+   margin-bottom: 10px;
+}
+
 main {
    width: 100%;
-   height: 500px;
-   background-color: blue;
+   height: 600px;
    padding: 20px;
+}
+.profile {
+   position: relative;
+   top: 0;
+   left: 0;
+   border: 1px solid black;
+   width: 30px;
+   text-align: justify;
+   padding: 50px;
+   border-radius: 20px;
+   margin: 5px;
+   height: 30px;
+}
+.experience {
+   position: relative;
+   top: 0;
+   left: 200px;
+   border: 1px solid black;
+   width: 60px;
+   text-align: center;
+   padding: 50px;
+   border-radius: 10px;
+   margin: 5px;
+   height: 40px;
+}
+.education {
+   position: relative;
+   top: 0;
+   left: 400px;
+   border: 1px solid black;
+   width: 60px;
+   text-align: center;
+   padding: 50px;
+   border-radius: 10px;
+   margin: 5px;
+   height: 40px;
+}
+.certification {
+   position: relative;
+   top: 0;
+   left: 600px;
+   border: 1px solid black;
+   width: 60px;
+   text-align: center;
+   padding: 50px;
+   border-radius: 10px;
+   margin: 5px;
+   height: 40px;
 }
 footer {
    width: 100%;
-   height: 100px;
-   background-color: black;
+   height: 150px;
+   background-color: rgba(222, 222, 224, 0.6);
    padding: 20px;
+   text-align: center;
+}
+aside {
+   display: flex;
+}
+address {
+   margin-right: 550px;
+   text-align: left;
+   line-height: 20px;
+}
+.footer-socials {
+   margin-left: 550px;
+   display: grid;
 }
