@@ -77,41 +77,15 @@ ul {
    text-align: justify;
    font-size: 12px;
 }
-/*.experience {
-   position: relative;
-   top: 0;
-   left: 200px;
-   border: 1px solid black;
-   width: 60px;
-   text-align: center;
-   padding: 50px;
-   border-radius: 10px;
-   margin: 5px;
-   height: 40px;
+
+.education p {
+   text-align: justify;
+   font-size: 12px;
 }
-.education {
-   position: relative;
-   top: 0;
-   left: 400px;
-   border: 1px solid black;
-   width: 60px;
-   text-align: center;
-   padding: 50px;
-   border-radius: 10px;
-   margin: 5px;
-   height: 40px;
-}
-.certification {
-   position: relative;
-   top: 0;
-   left: 600px;
-   border: 1px solid black;
-   width: 60px;
-   text-align: center;
-   padding: 50px;
-   border-radius: 10px;
-   margin: 5px;
-   height: 40px;
+
+.certification p {
+   text-align: justify;
+   font-size: 12px;
 }*/
 footer {
    width: 100%;
