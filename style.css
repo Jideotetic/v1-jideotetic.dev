@@ -6,6 +6,10 @@ body {
    font-family: monospace;
 }
 
+img {
+   border-radius: 50%;
+}
+
 a {
    color: rgba(255, 255, 255, 1);
    text-decoration: none;
