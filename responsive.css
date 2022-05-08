@@ -1,5 +1,21 @@
 @media (max-width: 670px) {
-   header {
-      background-color: blueviolet;
+   .header-title h1 {
+      font-size: 15px;
+   }
+   
+   .header-title a {
+      font-size: 10px;
+   }
+
+   .fa-brands {
+      margin-bottom: 7px;
+   }
+
+   footer i p {
+      font-size: 10px;
+   }
+
+   address {
+      font-size: 10px;
    }
 }
