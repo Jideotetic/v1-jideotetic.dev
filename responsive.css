@@ -3,20 +3,19 @@
       background-color: blueviolet;
    }
    .header-image {
-      margin: 0;
+      margin: 2px;
    }
    .header-title {
-      margin: 0;
+      margin: 2px;
    }
    .header-title h1 {
+      font-size: 15px;
+   }
+   .header-title a {
       font-size: 10px;
    }
    .header-socials {
-      margin: 0;
+      margin: 2px;
       display: grid;
    }
-}
-
-@media (max-width: 1000px) {
-
 }
