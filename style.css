@@ -14,7 +14,6 @@ header {
    height: 150px;
    background-color: rgba(222, 222, 224, 0.6);
    padding: 20px;
-   text-align: center;
 }
 
 img {
@@ -24,16 +23,12 @@ img {
 
 nav {
    display: flex;
+   justify-content: space-around;
 }
 
-/*.header-image {
-   margin-right: 100px;
+.header-image {
+   margin-right: auto;
 }
-
-.header-title {
-   margin-right: 340px;
-   margin-left: 340px;
-}*/
 
 .header-title h1 {
    font-size: 20px;
@@ -43,13 +38,14 @@ nav {
    font-size: 12px;
 }
 
-/*.header-socials {
-   margin-left: 100px;
+.header-socials {
+   margin-left: auto;
    display: grid;
-}*/
+}
 
 .fa-brands {
    margin-bottom: 10px;
+
 }
 
 main {
