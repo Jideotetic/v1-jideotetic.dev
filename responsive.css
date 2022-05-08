@@ -1,10 +1,16 @@
 @media (max-width: 670px) {
+   header {
+      background-color: blueviolet;
+   }
    .header-image {
-      margin-right: 20px;
+      margin: 0;
    }
    .header-title {
-      margin-right: 20px;
-      font-size: 15px;
+      margin: 0;
+      font-size: 10px;
+   }
+   .header-socials {
+      margin: 0;
    }
 }
 
