@@ -20,7 +20,9 @@
    }
    
    .container {
+      flex-wrap: wrap;
       flex-direction: column;
+      
    }
    
    .profile-experience, .education-certification {
