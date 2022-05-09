@@ -20,8 +20,8 @@
    }
    
    .container {
-      flex-wrap: wrap;
-      flex-direction: column;
+      display: block;
+      
       
    }
    
