@@ -22,7 +22,7 @@
    .container {
       flex-direction: column;
    }
-   .profile-experience, .education-certification {
+   .profile-experience, .education-certifications {
       width: 90%;
    }
 }
