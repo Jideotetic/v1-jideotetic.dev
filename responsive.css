@@ -23,6 +23,6 @@
       flex-direction: column;
    }
    .profile-experience, .education-certification {
-      width: 100%;
+      width: 90%;
    }
 }
