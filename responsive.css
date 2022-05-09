@@ -20,12 +20,12 @@
    }
    
    .container {
-      display: grid;
+      flex-direction: column;
    }
    
    .profile-experience, .education-certification {
       width: 90%;
-      margin: 10px 0;
+      margin: 10px auto;
    }
 
 
