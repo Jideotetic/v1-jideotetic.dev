@@ -1,4 +1,7 @@
 @media (max-width: 670px) {
+   header {
+      background-color: blue;
+   }
    .header-title h1 {
       font-size: 15px;
    }
