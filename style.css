@@ -131,6 +131,14 @@ footer p {
    font-style: italic;
 }
 
+.jump-to-bottom {
+   float: left;
+}
+
+.jump-to-top {
+   float: right;
+}
+
 @media (max-width: 670px) {
    p {
       font-size: 8px;
