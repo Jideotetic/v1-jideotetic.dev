@@ -32,7 +32,7 @@ nav {
 }
 
 .header-title h1 {
-   font-size: 30px;
+   font-size: 25px;
 }
 
 .header-title a {
@@ -99,7 +99,7 @@ ul {
 
 .container {
    display: flex;
-
+   flex-wrap: wrap;
 }
 
 footer {
@@ -109,10 +109,12 @@ footer {
    padding: 20px;
    text-align: center;
 }
+
 aside {
    display: flex;
    justify-content: space-around;
 }
+
 address {
    margin-right: auto;
    text-align: left;
@@ -129,7 +131,21 @@ footer p {
 }
 
 @media (max-width: 670px) {
-
+   p {
+      font-size: 10px;
+   }
+   
+   h1 {
+      font-size: 20px;
+   }
+   
+   h2 {
+      font-size: 15px;
+   }
+   
+   h3 {
+      font-size: 12px;
+   }
 
 
    .profile-experience, .education-certification {
