@@ -130,7 +130,7 @@ footer p {
 
 @media (max-width: 670px) {
    header {
-      background-color: blue;
+      background-color: grey;
    }
    .profile-experience, .education-certification {
       width: 90%;
