@@ -45,7 +45,7 @@ nav {
 }
 
 .fa-brands {
-   margin-bottom: 100px;
+   margin-bottom: 10px;
 }
 
 main {
@@ -64,27 +64,27 @@ h3 {
 }
 
 .profile p {
-   text-align: justify;
+   text-align: left;
    font-size: 12px;
 }
 
 .experience p {
-   text-align: justify;
+   text-align: left;
    font-size: 12px;
 }
 
 ul {
-   text-align: justify;
+   text-align: left;
    font-size: 12px;
 }
 
 .education p {
-   text-align: justify;
+   text-align: left;
    font-size: 12px;
 }
 
 .certification p {
-   text-align: justify;
+   text-align: left;
    font-size: 12px;
 }
 
@@ -129,9 +129,9 @@ footer p {
 }
 
 @media (max-width: 670px) {
-   header {
-      background-color: grey;
-   }
+
+
+
    .profile-experience, .education-certification {
       width: 90%;
       margin: 10px auto;
@@ -141,8 +141,7 @@ footer p {
       flex-direction: column;
    }
    
-   .fa-brands {
-      margin-bottom: 5px;
-   }
+
+
   
 }
