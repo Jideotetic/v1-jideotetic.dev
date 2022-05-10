@@ -141,11 +141,11 @@ footer p {
 
 @media (max-width: 670px) {
    p {
-      font-size: 8px;
+      font-size: 7px;
    }
    
    h1 {
-      font-size: 12px;
+      font-size: 11px;
    }
    
    h2 {
