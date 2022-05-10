@@ -127,3 +127,9 @@ footer p {
    font-size: 12px;
    font-style: italic;
 }
+
+@media (max-width: 670px) {
+   header {
+      background-color: blue;
+   }
+}
