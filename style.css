@@ -132,4 +132,17 @@ footer p {
    header {
       background-color: blue;
    }
+   .profile-experience, .education-certification {
+      width: 90%;
+      margin: 10px auto;
+   }
+   
+   .container {
+      flex-direction: column;
+   }
+   
+   .fa-brands {
+      margin-bottom: 5px;
+   }
+  
 }
