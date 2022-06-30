@@ -1,178 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale-1.0" />
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/d9b8043dd4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#contact-me">CONTACT ME</a>
+      <a href="index.html">ABOUT ME</a>
+    </nav>
+  </header>
+  <main>
+    <div class="heading">
+      <h1>ABDULBASIT YUSUF</h1>
+      <img src="jide.jpg" alt="My picture">
+    </div>
 
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <script src="https://kit.fontawesome.com/d9b8043dd4.js" crossorigin="anonymous"></script>
-        
-        <title>
-            jideotetic.github.io
-        </title> 
+    <div class="profile">
+      <details>
+        <summary>
+          <h2 id="profile-h2">PROFILE</h2>
+        </summary>
+        <hr>
+        <p>
+          A highly motivated software engineer in training with a flair for building and designing responsive and interactive websites. Interested in frontend web development, customer service and personal growth. I am proficient in HTML/CSS and currently learning Javascript wit incredible ease of adapting and learning new technologies as need be.
+        </p>
+        <p>
+          My goal for this diploma course is to develop a highly sought-after skill in tech to be able to collaborate with any team from anywhere in the world.
+        </p>
+      </details>
+    </div>
+    <div class="education-certificates">
+      <details>
+        <summary>
+          <h2>EDUCATION & CERTIFICATES</h2>
+        </summary>
+        <hr>
+        <ul>
+          <li>
+            Jobberman Soft Skills Training Certification - 2021
+          </li>
+          <li>
+            Usmanu Danfodiyo University Sokoto - 2013 - 2017
+          </li>
+          <li>
+            Bsc. in Biochemistry - 2017
+          </li>
+        </ul>
+      </details>
+    </div>
+    <div class="experience">
+      <details>
+        <summary>
+          <h2>EXPERIENCE</h2>
+        </summary>
+        <hr>
+        <div class="algorithm">
+          <details>
+            <summary>
+              <h3>ALGORITHM ENGINEERING NIGERIA LIMITED, Ilorin, Kwara State - 2020 - 2022</h3>
+            </summary>
+            <hr>
+            <p>
+              Position: Field Engineer
+            </p>
+            <ul>
+              <li>
+                Installation and commissioning of microwave link and radiofrequency equipment.
+              </li>
+              <li>
+                Trained IT students on the basic principle of installation and commissioning.
+              </li>
+              <li>
+                Carry out technical site survey and report (TSSR).
+              </li>
+            </ul>
+          </details>
+        </div>
+        <div class="ecart">
+          <details>
+            <summary>
+              <h3>ECART INTERNET SERVICES NIGERIA LIMITED, Yaba, Lagos - 2019</h3>
+            </summary>
+            <hr>
+            <p>
+              Position: Customer Service Representative
+            </p>
+            <ul>
+              <li>
+                Use the Order Management System (OMS) to drop comment of the customer enquiry for other team members to see.
+              </li>
+              <li>
+                Effectively managed average incoming calls of up 100 per day.
+              </li>
+              <li>
+                Received customers calls via the x-cally shuttle.
+              </li>
+              <li>
+                Use salesforce to send mail to customer.
+              </li>
+            </ul>
+          </details>
+        </div>
+      </details>
+    </div>
+    <div id="contact-me">
+      <form action="#" method="post" name="contact-me-form" autocomplete="on" target="_blank">
+        <fieldset>
+          <legend>
+            CONTACT ME
+          </legend>
+          <p>
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name" required>
+          </p>
+          <p>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" required>
+          </p>
+          <p>
+            <label for="message">Message</label><br>
+            <textarea name="meassage" id="message" required placeholder="Drop me a message."></textarea>
+          </p>
+          <p>
+            <label for="priority">Priority</label><br>
+            <select name="priority" id="priority">
+              <option value="Select-the-priority-this-message">..</option>
+              <option value="Very-important">Very important</option>
+              <option value="Very-important">Less important</option>
+            </select>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </fieldset>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="skills-hobbies">
+      <div class="skills">
+        <h2>
+          SKILLS
+        </h2>
+        <hr>
+        <ul>
+          <li>
+            Effective Communication
+          </li>
+          <li>
+            Relationship Building
+          </li>
+          <li>
+            Problem Solving
+          </li>
+          <li>
+            Fast Learning
+          </li>
+          <li>
+            Adaptability
+          </li>
+          <li>
+            Teamwork
+          </li>
+        </ul>
+      </div>
+      <div class="hobbies">
+        <h2>
+          HOBBIES
+        </h2>
+        <hr>
+        <ul>
+          <li>
+            Learning New Languages
+          </li>
+          <li>
+            Reading
+          </li>
+          <li>
+            Football
+          </li>
+          <li>
+            Coding
+          </li>
+          <li>
+            Movies
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-socials">
+      <a href="https://github.com/jideotetic" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/yusuf-abdulbasit-a64a57151" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.twitter.com/habdulbasheet" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.facebook.com/yussuf.abdulbasheet" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com/jideotetic/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="mailto:jideotetic@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+    <hr>
+    <p><i>Designed by Abdulbasit Yusuf</i></p>
+  </footer>
+  <script src="index.js"></script>
+</body>
 
-    </head> 
-    <body>
-        <header id="header">
-            <nav>
-
-                <div class="header-image">
-                    <img src="jide.jpg" alt="My picture" />
-                </div>
-
-                <div class="header-title">
-                    <i>
-                        <h1>ABDULBASIT YUSUF</h1>
-                        <a href="mailto:jideotetic@gmail.com" target="_blank">JIDEOTETIC@GMAIL.COM</a>
-                    </i>
-                </div>
-
-                <div class="header-socials">
-                    <a href="https://github.com/jideotetic" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/yusuf-abdulbasit-a64a57151" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.twitter.com/habdulbasheet" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/yussuf.abdulbasheet" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/jideotetic/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-
-            </nav>
-        </header>
-
-        <main>
-        
-            <div class="jump-to-bottom">
-                <a href="#footer"><i class="fa-solid fa-arrow-down"></i></a>
-            </div>
-            <div class="container">
-                <div class="profile-experience">
-                    <div class="profile">
-                        <h2>PROFILE</h2>
-                        <p>A highly motivated software engineer in training with a flair for building and designing responsive and interactive websites. Interested in frontend web development, customer service and personal growth. I am proficient in HTML/CSS and currently learning JavaScript with incredible ease of adapting and learning new technologies as need be.</p>
-                    </div>
-        
-                    <div class="experience">
-                        <h2>EXPERIENCE</h2>
-                        <h3>ALGORITHM ENGINEERING NIGERIA LIMITED (Kwara, Nigeria) - 01/07/2020 - 30/02/2022</h3>
-                        <p>Position: Field Engineer</p>
-                        <ul>
-                            <li>Installation and commissioning of microwave link and radio frequency equipment for new and swap sites</li>
-                            <li>Trained IT students on the basic principle of installation and commissioning</li>
-                            <li>Carry out technical site survey and report (TSSR)</li>
-                        </ul>
-                        <h3>ECART INTERNET SERVICE LIMITED (Lagos, Nigeria) - 01/10/2019 - 30/12/2019</h3>
-                        <p>Position: Customer Service Representative</p>
-                        <ul>
-                            <li>Use the Order Management System (OMS) to drop comment of the customer enquiry for other team members to see</li>
-                            <li>Effectively managed average incoming calls of up 100 per day</li>
-                            <li>Received customers calls via the xcally shuttle</li>
-                            <li>Use salesforce to send mail to customer</li>
-                        </ul>
-                    </div>
-                </div>
-    
-                <div class="education-certification">
-                    <div class="education">
-                        <h2>EDUCATION</h2>
-                        <p>Usmanu Danfodiyo University, Sokoto - (2013 - 2017)</p>
-                    </div>
-        
-                    <div class="certification">
-                        <h2>CERTFICATIONS</h2>
-                        <p>Jobberman Soft Skills Training Certification - 2021</p>
-                        <p>Nokia License-0 Enablement-Test - 2020</p>
-                        <p>Professional Certifictae in Information Communication Technology - 2019</p>
-                        <p>Professional Certificate in Customer Relationship Management - 2019</p>
-                        <p>BSc Biochemistry</p>
-                        <ul>
-                            <li>2:1, Second Class Honours, Upper Division - 2017</li>
-                        </ul>
-                    </div>
-                    <div class="skills">
-                        <h2>
-                            SKILLS
-                        </h2>
-
-                        <ul>
-                            <li>
-                            Effective Communication
-                            </li>
-                            <li>
-                            Relationship Building
-                            </li>
-                            <li>
-                            Problem Solving
-                            </li>
-                            <li>
-                            Fast Learning
-                            </li>
-                            <li>
-                            Adaptability
-                            </li>
-                            <li>
-                            Teamwork
-                            </li>
-                        </ul>
-                        </div>
-                        <div class="hobbies">
-                        <h2>
-                            HOBBIES
-                        </h2>
-                        
-                        <ul>
-                            <li>
-                            Learning New Languages
-                            </li>
-                            <li>
-                            Reading
-                            </li>
-                            <li>
-                            Football
-                            </li>
-                            <li>
-                            Coding
-                            </li>
-                            <li>
-                            Movies
-                            </li>
-                        </ul>
-                        </div>
-                    </div>
-                </div>
-
-
-            <div class="jump-to-top">
-                <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
-            </div>
-        
-        </main>
-
-        <footer id="footer">
-            <aside>
-
-                <address>
-                    Adenugba Street<br /> 
-                    Oregun Ikeja,<br /> 
-                    Lagos State.
-                </address>
-                
-                <a href="YUSUF ABDULBASIT's CV 1.docx" download="Yusuf_Abdulbasit_CV">Download Resume</a>
-
-                <div class="footer-socials">
-                    <a href="https://github.com/jideotetic" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/yusuf-abdulbasit-a64a57151" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.twitter.com/habdulbasheet" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/yussuf.abdulbasheet" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/jideotetic/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-
-            </aside>
-
-            <hr />
-
-            <p>Designed by Abdulbasit Yusuf</p>
-
-        </footer>
-
-    </body>
-    </html>
+</html>
