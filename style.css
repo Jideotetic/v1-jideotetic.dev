@@ -1,129 +1,79 @@
-html, body {
+* {
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Courier New', Courier, monospace;
 }
-  
-h1, h2, h3 {
-    margin: 0;
-    padding: 0;
-}
-  
+
+/* Header style */
+
 header {
-    background-color: blue;
-    padding: 10px;
-    color: white;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-}
-
-nav {
-    margin: 10px 0 0 auto;
-    height: 100%;
-    text-align: center;
+    background-color: hsla(240, 100%, 50%, 0.8);
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    height: 210px;
+    padding: 5px;
 }
 
-nav a {
-    color: white;
+.header-text {
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: large;
+    margin-left: 5px;
+    margin-top: 5px;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-duration: 5s;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.nav-bar > a {
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: large;
     text-decoration: none;
-    font-size: 15px;
-    display: block;
-    margin-bottom: 10px;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-duration: 10s;
 }
 
-img {
-    width: 100px;
-    border-radius: 50%;
-}
+/* Content style */
 
 main {
-    color: blue;
-    padding: 10px;
-    width: 100%;
-    height: 100%;
+    color: hsla(240, 100%, 50%, 0.8);
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation-name: slideIn, fadeIn;
+    animation-iteration-count: 1;
+    animation-duration: 5s;
 }
 
 .heading {
-    text-align: center;
-}
-
-.heading h1 {
-    font-size: 40px;
-}
-
-.profile {
-    width: 50%;
-    text-align: left;
-    margin: 10px auto;
-}
-
-.profile details summary h2 {
-    font-size: 25px;
-}
-
-.profile details p {
-    font-size: 12px;
-}
-
-.education-certificates {
-    width: 50%;
-    text-align: left;
-    margin: 30px auto;
-}
-
-.education-certificates details summary h2 {
-    font-size: 25px;
-}
-
-.education-certificates details ul li {
-    font-size: 12px;
-}
-
-.experience {
-    width: 50%;
-    text-align: left;
-    margin: 30px auto;
-}
-
-.experience details summary h2 {
-    font-size: 25px;
-}
-
-.algorithm {
-    width: 100%;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
     margin-bottom: 20px;
+    align-items: center;
 }
 
-.algorithm details summary h3 {
-    font-size: 18px;
-}
-
-.algorithm details p {
-    font-size: 12px;
-}
-
-.algorithm details ul li {
-    font-size: 12px;
-}
-
-.ecart {
-    width: 100%;
-    text-align: left;
-}
-
-.ecart details summary h3 {
-    font-size: 18px;
-}
-
-.ecart details p {
-    font-size: 12px;
-}
-
-.ecart details ul li {
-    font-size: 12px;
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 details summary > * {
@@ -134,314 +84,107 @@ details summary {
     cursor: pointer;
 }
 
-#contact-me {
-    width: 50%;
-    margin: 0 auto 10px auto;
+.algorithm {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-legend {
-    font-size: 15px;
-}
-
-label {
-    font-size: 12px;
+fieldset {
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+gap: 10px;
 }
 
 input {
-    width: 40%;
+    width: 50%;
+    border-radius: 5px;
+    border: 0.1px solid rgb(0, 0, 0);
+    height: 30px;
 }
 
 textarea {
     width: 80%;
     height: 200px;
+    border-radius: 5px;
 }
 
 select {
-    width: 40%;
-}
-
-#register-form {
     width: 50%;
-    margin: 50px auto auto auto;
+    border-radius: 5px;
+    height: 30px;
 }
 
-#sign-in-form {
-    width: 50%;
-    margin: 50px auto auto auto;
-}
-
-.table-calculator, .flex-calculator {
-    width: 25%;
-    height: 510px;
-    margin: 50px auto auto auto;
-    background-color: blue;
-    padding: 50px;
-    border-radius: 10px;
-}
-
-.table-calculator input,  .flex-calculator input {
-    width: 98%;
-    height: 60px;
-    border-radius: 10px;
-    text-align: right;
-    font-size: 50px;
-    margin-bottom: 15px;
-}
-
-.calculator {
-    width: 100%;
-    height: 450px;
-    text-align: center;
-}
-
-.calculator tr td button {
-    font-size: 25px;
-    width: 80%;
-    height: 80%;
-    text-align: center;
-    border-radius: 50%;
-}
-
-.button-container {
-    width: 100%;
-    height: 450px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.button-container div {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.button-container div button {
-    font-size: 25px;
-    width: 20%;
-    height: 75%;
-    text-align: center;
-    border-radius: 50%;
+button {
+    width: 30%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: hsla(240, 100%, 50%, 0.8);
+    color: rgb(255, 255, 255);
 }
 
 footer {
-    background-color: blue;
-    padding: 10px;
-    color: white;
-    height: 100%;
-    width: 100%;
+    background-color: hsla(240, 100%, 50%, 0.8);
+    padding: 10px 5px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .skills-hobbies {
     display: flex;
-    justify-content: space-around;
-}
-  
-.skills {
-    width: 15%;
-    margin: 0 auto 0 30px;
-}
-
-.skills h2 {
-    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-duration: 10s;
 }
 
 .skills ul {
     list-style-type: none;
     padding-left: 0;
-    font-size: 12px;
-}
-  
-.hobbies {
-    width: 15%;
-    margin: 0 30px 0 auto;
-}
-  
-.hobbies h2 {
-    font-size: 20px;
 }
 
 .hobbies ul {
     list-style-type: none;
     padding: 0;
-    font-size: 12px;
 }
 
 footer p {
-    text-align: center;
+    align-self: center;
 }
 
 .footer-socials {
-    margin: 10px auto 0 auto;
-    text-align: center;
+    align-self: center;
 }
 
 .footer-socials a i {
-    color: white;
-    
+    color: rgb(255, 255, 255);
     margin-right: 15px;
 }
 
-@media (max-width: 600px) {
-    nav {
-        margin: 10px 0 0 auto;
-        height: 100%;
-        text-align: right;
-        display: block;
-    }
-    
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 12px;
-        display: block;
-        margin-bottom: 10px;
-    }
-
-  .heading {
-        text-align: center;
-        width: 100%;
-    }
-    
-    .heading h1 {
-        font-size: 20px;
-    }
-
-  .profile {
-    width: 100%;
-    text-align: left;
-    margin: 10px auto;
-  }
-
-  .profile details summary h2 {
-        font-size: 15px;
-    }
-    
-    .profile details p {
-        font-size: 12px;
-    }
-
-  .education-certificates {
-    width: 100%;
-    text-align: left;
-    margin: 10px auto;
-}
-
-.education-certificates details summary h2 {
-    font-size: 15px;
-}
-
-.education-certificates details ul li {
-    font-size: 12px;
-}
-
-.experience {
-    width: 100%;
-    text-align: left;
-    margin: 10px auto;
-}
-
-.experience details summary h2 {
-    font-size: 15px;
-}
-
-.algorithm {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.algorithm details summary h3 {
-    font-size: 15px;
-}
-
-.algorithm details p {
-    font-size: 12px;
-}
-
-.algorithm details ul li {
-    font-size: 12px;
-}
-
-.ecart {
-    width: 100%;
-    text-align: left;
-}
-
-.ecart details summary h3 {
-    font-size: 15px;
-}
-
-.ecart details p {
-    font-size: 12px;
-}
-
-.ecart details ul li {
-    font-size: 12px;
-}
-
-#contact-me {
-    width: 90%;
-    margin: 0 auto 10px auto;
-}
-
-input {
-    width: 50%;
-}
-
-textarea {
-    width: 80%;
-    height: 200px;
-}
-
-select {
-    width: 50%;
-}
-
-#register-form {
-    width: 90%;
-    margin: 50px auto auto auto;
-}
-
-#sign-in-form {
-    width: 90%;
-    margin: 50px auto auto auto;
-}
-
 .table-calculator, .flex-calculator {
-    width: 70%;
-    height: 510px;
-    margin: 50px auto auto auto;
-    background-color: blue;
-    padding: 50px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin: 100px 0 50px 0;
+    background-color: hsla(240, 100%, 50%, 0.8);
+    padding: 25px;
     border-radius: 10px;
 }
 
 .table-calculator input,  .flex-calculator input {
-    width: 98%;
+    width: 100%;
     height: 60px;
     border-radius: 10px;
     text-align: right;
     font-size: 50px;
-    margin-bottom: 15px;
-}
-
-.calculator {
-    width: 100%;
-    height: 450px;
-    text-align: center;
-}
-
-.calculator tr td button {
-    font-size: 25px;
-    width: 80%;
-    height: 80%;
-    text-align: center;
-    border-radius: 50%;
+    display: flex;
 }
 
 .button-container {
-    width: 100%;
     height: 450px;
     display: flex;
     flex-wrap: wrap;
@@ -462,24 +205,86 @@ select {
     border-radius: 50%;
 }
 
-
-.skills {
-    width: 15%;
-    margin: 0 auto 0 10px;
+#register-form {
+    margin: 100px 0 50px 0;
 }
 
-.skills h2 {
-    font-size: 15px;
+#sign-in-form {
+    margin: 100px 0 50px 0;
 }
 
-.hobbies {
-    width: 15%;
-    margin: 0 10px 0 auto;
-}
-  
-.hobbies h2 {
-    font-size: 15px;
+/* animations */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
+@keyframes slideIn {
+    0% {
+        margin-top: 500px;
+    }
+
+    100% {
+        margin-bottom: auto;
+    }
+}
+
+/* media queries */
+@media (min-width: 820px) {
+    header {
+        height: 50px;
+        align-items: center;
+    }
+
+    .nav-bar {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    main {
+        align-items: center;
+    }
+
+    .profile {
+        width: 50%;
+    }
     
+    .education-certificates {
+        width: 50%;
+    }
+    
+    .experience {
+        width: 50%;
+    }
+
+    #contact-me {
+        width: 50%;
+    }
+
+    .skills-hobbies {
+        flex-direction: row;
+    }
+
+    .hobbies {
+        margin-left: auto;
+    }
+    
+    .table-calculator, .flex-calculator {
+        width: 30%;
+    }
+
+    #register-form {
+        width: 50%;
+    }
+
+    #sign-in-form {
+        width: 50%;
+    }
+
 }
