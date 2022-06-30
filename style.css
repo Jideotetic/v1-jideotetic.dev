@@ -13,7 +13,7 @@ header {
     background-color: hsla(240, 100%, 50%, 0.8);
     display: flex;
     flex-direction: row;
-    height: 210px;
+    height: 50px;
     padding: 5px;
 }
 
@@ -110,12 +110,6 @@ textarea {
     border-radius: 5px;
 }
 
-select {
-    width: 50%;
-    border-radius: 5px;
-    height: 30px;
-}
-
 button {
     width: 30%;
     padding: 5px;
@@ -166,25 +160,6 @@ footer p {
     margin-right: 15px;
 }
 
-.table-calculator, .flex-calculator {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    margin: 100px 0 50px 0;
-    background-color: hsla(240, 100%, 50%, 0.8);
-    padding: 25px;
-    border-radius: 10px;
-}
-
-.table-calculator input,  .flex-calculator input {
-    width: 100%;
-    height: 60px;
-    border-radius: 10px;
-    text-align: right;
-    font-size: 50px;
-    display: flex;
-}
-
 .button-container {
     height: 450px;
     display: flex;
@@ -207,10 +182,6 @@ footer p {
 }
 
 #register-form {
-    margin: 100px 0 50px 0;
-}
-
-#sign-in-form {
     margin: 100px 0 50px 0;
 }
 
