@@ -1,179 +1,485 @@
-* {
-   box-sizing: border-box;
+html, body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
-body, h1, a {
-   margin: 0;
-   padding: 0;
-   font-family: monospace;
-   text-decoration: none;
-   color: grey;
+  
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
 }
-
+  
 header {
-   width: 100%;
-   height: 100%;
-   background-color: rgba(222, 222, 224, 0.6);
-   padding: 20px;
-   text-align: center;
-}
-
-img {
-   border-radius: 50%;
-   width: 50px;
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    height: 100%;
+    width: 100%;
+    text-align: center;
 }
 
 nav {
-   display: flex;
-   justify-content: space-around;
+    margin: 10px 0 0 auto;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
-.header-image {
-   margin-right: auto;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 10px;
 }
 
-.header-title h1 {
-   font-size: 25px;
-}
-
-.header-title a {
-   font-size: 12px;
-}
-
-.header-socials {
-   margin-left: auto;
-   display: grid;
-}
-
-.fa-brands {
-   margin-bottom: 10px;
+img {
+    width: 100px;
+    border-radius: 50%;
 }
 
 main {
-   width: 100%;
-   height: 100%;
-   padding: 20px;
-   text-align: left;
+    color: blue;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
 }
 
-h2 {
-   font-size: 20px;
+.heading {
+    text-align: center;
 }
 
-h3 {
-   font-size: 15px;
+.heading h1 {
+    font-size: 40px;
 }
 
-.profile p {
-   text-align: left;
-   font-size: 12px;
+.profile {
+    width: 50%;
+    text-align: left;
+    margin: 10px auto;
 }
 
-.experience p {
-   text-align: left;
-   font-size: 12px;
+.profile details summary h2 {
+    font-size: 25px;
 }
 
-ul {
-   text-align: left;
-   font-size: 12px;
+.profile details p {
+    font-size: 12px;
 }
 
-.education p {
-   text-align: left;
-   font-size: 12px;
+.education-certificates {
+    width: 50%;
+    text-align: left;
+    margin: 30px auto;
 }
 
-.certification p {
-   text-align: left;
-   font-size: 12px;
+.education-certificates details summary h2 {
+    font-size: 25px;
 }
 
-.profile-experience, .education-certification {
-   border: 1px solid black;
-   margin: 10px auto;
-   padding: 20px;
-   width: 45%;
-   border-radius: 10px;
-   box-shadow: 10px 10px rgba(222, 222, 224, 0.6);
+.education-certificates details ul li {
+    font-size: 12px;
 }
 
-.container {
-   display: flex;
-   flex-wrap: wrap;
+.experience {
+    width: 50%;
+    text-align: left;
+    margin: 30px auto;
+}
 
+.experience details summary h2 {
+    font-size: 25px;
+}
+
+.algorithm {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.algorithm details summary h3 {
+    font-size: 18px;
+}
+
+.algorithm details p {
+    font-size: 12px;
+}
+
+.algorithm details ul li {
+    font-size: 12px;
+}
+
+.ecart {
+    width: 100%;
+    text-align: left;
+}
+
+.ecart details summary h3 {
+    font-size: 18px;
+}
+
+.ecart details p {
+    font-size: 12px;
+}
+
+.ecart details ul li {
+    font-size: 12px;
+}
+
+details summary > * {
+    display: inline;
+}
+
+details summary {
+    cursor: pointer;
+}
+
+#contact-me {
+    width: 50%;
+    margin: 0 auto 10px auto;
+}
+
+legend {
+    font-size: 15px;
+}
+
+label {
+    font-size: 12px;
+}
+
+input {
+    width: 40%;
+}
+
+textarea {
+    width: 80%;
+    height: 200px;
+}
+
+select {
+    width: 40%;
+}
+
+#register-form {
+    width: 50%;
+    margin: 50px auto auto auto;
+}
+
+#sign-in-form {
+    width: 50%;
+    margin: 50px auto auto auto;
+}
+
+.table-calculator, .flex-calculator {
+    width: 25%;
+    height: 510px;
+    margin: 50px auto auto auto;
+    background-color: blue;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.table-calculator input,  .flex-calculator input {
+    width: 98%;
+    height: 60px;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.calculator {
+    width: 100%;
+    height: 450px;
+    text-align: center;
+}
+
+.calculator tr td button {
+    font-size: 25px;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.button-container {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-container div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.button-container div button {
+    font-size: 25px;
+    width: 20%;
+    height: 75%;
+    text-align: center;
+    border-radius: 50%;
 }
 
 footer {
-   width: 100%;
-   height: 100%;
-   background-color: rgba(222, 222, 224, 0.6);
-   padding: 20px;
-   text-align: center;
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    height: 100%;
+    width: 100%;
 }
 
-aside {
-   display: flex;
-   justify-content: space-around;
+.skills-hobbies {
+    display: flex;
+    justify-content: space-around;
 }
-
-address {
-   margin-right: auto;
-   text-align: left;
-   line-height: 20px;
-   font-size: 12px;
-}
-.footer-socials {
-   margin-left: auto;
-   display: grid;
-}
-footer p {
-   font-size: 12px;
-   font-style: italic;
-}
-
-.jump-to-bottom {
-   float: left;
-}
-
-.jump-to-top {
-   float: right;
-}
-
-@media (max-width: 670px) {
-   p {
-      font-size: 5px;
-   }
-   
-   header h1 {
-      font-size: 8px;
-   }
-   
-   h2 {
-      font-size: 10px;
-   }
-   
-   h3 {
-      font-size: 9px;
-   }
-
-
-   .profile-experience, .education-certification {
-      width: 90%;
-      margin: 10px auto;
-   }
-   
-   .container {
-      flex-direction: column;
-   }
-   
-   header a {
-      font-size: 6px;
-   }
-   
-   .fa-brands {
-      font-size: 10px;
-      
-   }
-
   
+.skills {
+    width: 15%;
+    margin: 0 auto 0 30px;
+}
+
+.skills h2 {
+    font-size: 20px;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 12px;
+}
+  
+.hobbies {
+    width: 15%;
+    margin: 0 30px 0 auto;
+}
+  
+.hobbies h2 {
+    font-size: 20px;
+}
+
+.hobbies ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 12px;
+}
+
+footer p {
+    text-align: center;
+}
+
+.footer-socials {
+    margin: 10px auto 0 auto;
+    text-align: center;
+}
+
+.footer-socials a i {
+    color: white;
+    
+    margin-right: 15px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        margin: 10px 0 0 auto;
+        height: 100%;
+        text-align: right;
+        display: block;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+  .heading {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .heading h1 {
+        font-size: 20px;
+    }
+
+  .profile {
+    width: 100%;
+    text-align: left;
+    margin: 10px auto;
+  }
+
+  .profile details summary h2 {
+        font-size: 15px;
+    }
+    
+    .profile details p {
+        font-size: 12px;
+    }
+
+  .education-certificates {
+    width: 100%;
+    text-align: left;
+    margin: 10px auto;
+}
+
+.education-certificates details summary h2 {
+    font-size: 15px;
+}
+
+.education-certificates details ul li {
+    font-size: 12px;
+}
+
+.experience {
+    width: 100%;
+    text-align: left;
+    margin: 10px auto;
+}
+
+.experience details summary h2 {
+    font-size: 15px;
+}
+
+.algorithm {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.algorithm details summary h3 {
+    font-size: 15px;
+}
+
+.algorithm details p {
+    font-size: 12px;
+}
+
+.algorithm details ul li {
+    font-size: 12px;
+}
+
+.ecart {
+    width: 100%;
+    text-align: left;
+}
+
+.ecart details summary h3 {
+    font-size: 15px;
+}
+
+.ecart details p {
+    font-size: 12px;
+}
+
+.ecart details ul li {
+    font-size: 12px;
+}
+
+#contact-me {
+    width: 90%;
+    margin: 0 auto 10px auto;
+}
+
+input {
+    width: 50%;
+}
+
+textarea {
+    width: 80%;
+    height: 200px;
+}
+
+select {
+    width: 50%;
+}
+
+#register-form {
+    width: 90%;
+    margin: 50px auto auto auto;
+}
+
+#sign-in-form {
+    width: 90%;
+    margin: 50px auto auto auto;
+}
+
+.table-calculator, .flex-calculator {
+    width: 70%;
+    height: 510px;
+    margin: 50px auto auto auto;
+    background-color: blue;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.table-calculator input,  .flex-calculator input {
+    width: 98%;
+    height: 60px;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.calculator {
+    width: 100%;
+    height: 450px;
+    text-align: center;
+}
+
+.calculator tr td button {
+    font-size: 25px;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.button-container {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-container div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.button-container div button {
+    font-size: 25px;
+    width: 20%;
+    height: 75%;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+.skills {
+    width: 15%;
+    margin: 0 auto 0 10px;
+}
+
+.skills h2 {
+    font-size: 15px;
+}
+
+.hobbies {
+    width: 15%;
+    margin: 0 10px 0 auto;
+}
+  
+.hobbies h2 {
+    font-size: 15px;
+}
+
+    
 }
