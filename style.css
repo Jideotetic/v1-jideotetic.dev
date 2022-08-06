@@ -5,97 +5,79 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(128, 128, 128, 0.2);
 }
 
 /* Header style */
 
 header {
-    background-color: hsla(240, 100%, 50%, 0.8);
     display: flex;
-    flex-direction: row;
-    height: 50px;
-    padding: 5px;
-}
-
-.header-text {
-    color: rgb(255, 255, 255);
-    font-weight: 900;
-    font-size: large;
-    margin-left: 5px;
-    margin-top: 5px;
-    animation-name: fadeIn;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    padding: 20px 20px 20px 20px;
+    max-width: 100%;
+    animation: fadeIn;
     animation-iteration-count: 1;
     animation-duration: 5s;
+}
+
+.header-logo {
+    font-size: 40px;
 }
 
 .nav-bar {
     display: flex;
-    gap: 20px;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: auto;
-    margin-top: 5px;
-    margin-right: 5px;
+    gap: 40px;
 }
 
-.nav-bar > a {
-    color: rgb(255, 255, 255);
-    font-weight: 900;
-    font-size: large;
-    text-decoration: none;
-    animation-name: fadeIn;
-    animation-iteration-count: 1;
-    animation-duration: 10s;
+.fa-moon, .fa-bars {
+    cursor: pointer;
+    font-size: 40px;
 }
 
-/* Content style */
+/* CONTENT STYLES */
 
 main {
-    color: hsla(240, 100%, 50%, 0.8);
-    padding: 20px 10px 20px 10px;
+    color: rgba(0, 0, 0);
+    padding: 20px 20px 50px 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    animation-name: slideIn, fadeIn;
+    animation-name: slideIn;
     animation-iteration-count: 1;
     animation-duration: 5s;
 }
 
-.heading {
+.intro {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    align-items: center;
+    gap: 20px;
+    padding-bottom: 50px;
 }
 
-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+.intro h1 {
+    font-size: 45px;
+    line-height: 75px;
 }
 
-details summary > * {
-    display: inline;
+.intro p {
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
-details summary {
-    cursor: pointer;
-}
-
-.algorithm {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.profile {
+    padding-top: 50px;
+    margin-bottom: 50px;
 }
 
 fieldset {
-border-radius: 10px;
-display: flex;
-flex-direction: column;
-gap: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-
+    
 input {
     width: 50%;
     border-radius: 5px;
@@ -109,41 +91,14 @@ textarea {
     border-radius: 5px;
 }
 
-button {
-    width: 30%;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: hsla(240, 100%, 50%, 0.8);
-    color: rgb(255, 255, 255);
-}
+/* FOOTER STYLES */
 
 footer {
-    background-color: hsla(240, 100%, 50%, 0.8);
     padding: 10px 5px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.skills-hobbies {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    animation-name: fadeIn;
-    animation-iteration-count: 1;
-    animation-duration: 10s;
-}
-
-.skills ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.hobbies ul {
-    list-style-type: none;
-    padding: 0;
 }
 
 footer p {
@@ -155,36 +110,11 @@ footer p {
 }
 
 .footer-socials a i {
-    color: rgb(255, 255, 255);
+    color: rgb(51, 47, 47);
     margin-right: 15px;
 }
 
-.button-container {
-    height: 450px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.button-container div {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.button-container div button {
-    font-size: 25px;
-    width: 20%;
-    height: 75%;
-    text-align: center;
-    border-radius: 50%;
-}
-
-#register-form {
-    margin: 100px 0 50px 0;
-}
-
-/* animations */
+/* @KEYFRAMES RULE */
 
 @keyframes fadeIn {
     0% {
@@ -206,56 +136,37 @@ footer p {
     }
 }
 
-/* media queries */
-@media (min-width: 820px) {
-    header {
-        height: 50px;
-        align-items: center;
+/* HEADER @MEDIA RULES */
+
+@media (min-width: 768px) {
+    header, main, footer {
+        width: 768px;
+        margin: 0 auto;
     }
 
     .nav-bar {
-        flex-direction: row;
-        align-items: flex-start;
+        gap: 100px;
+    }
+}
+
+@media (min-width: 1440px) {
+    header, main, footer {
+        width: 1024px;
+        margin: 0 auto;
     }
 
-    main {
-        align-items: center;
+    .nav-bar {
+        gap: 100px;
+    }
+}
+
+@media (min-width: 2560px) {
+    header, main, footer {
+        width: 1440px;
+        margin: 0 auto;
     }
 
-    .profile {
-        width: 50%;
+    .nav-bar {
+        gap: 100px;
     }
-    
-    .education-certificates {
-        width: 50%;
-    }
-    
-    .experience {
-        width: 50%;
-    }
-
-    #contact-me {
-        width: 50%;
-    }
-
-    .skills-hobbies {
-        flex-direction: row;
-    }
-
-    .hobbies {
-        margin-left: auto;
-    }
-    
-    .table-calculator, .flex-calculator {
-        width: 30%;
-    }
-
-    #register-form {
-        width: 50%;
-    }
-
-    #sign-in-form {
-        width: 50%;
-    }
-
 }
