@@ -26,6 +26,10 @@ header {
     font-size: 40px;
 }
 
+.header-logo {
+    font-size: 40px;
+}
+
 .nav-bar {
     display: flex;
     gap: 40px;
@@ -34,6 +38,41 @@ header {
 .fa-moon, .fa-bars {
     cursor: pointer;
     font-size: 40px;
+}
+
+/* HEADER @MEDIA RULES */
+
+@media (min-width: 768px) {
+    header {
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    .nav-bar {
+        gap: 100px;
+    }
+}
+
+@media (min-width: 1440px) {
+    header {
+        width: 1024px;
+        margin: 0 auto;
+    }
+
+    .nav-bar {
+        gap: 100px;
+    }
+}
+
+@media (min-width: 2560px) {
+    header {
+        width: 1440px;
+        margin: 0 auto;
+    }
+
+    .nav-bar {
+        gap: 100px;
+    }
 }
 
 /* CONTENT STYLES */
