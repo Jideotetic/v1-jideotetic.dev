@@ -40,41 +40,6 @@ header {
     font-size: 40px;
 }
 
-/* HEADER @MEDIA RULES */
-
-@media (min-width: 768px) {
-    header {
-        width: 768px;
-        margin: 0 auto;
-    }
-
-    .nav-bar {
-        gap: 100px;
-    }
-}
-
-@media (min-width: 1440px) {
-    header {
-        width: 1024px;
-        margin: 0 auto;
-    }
-
-    .nav-bar {
-        gap: 100px;
-    }
-}
-
-@media (min-width: 2560px) {
-    header {
-        width: 1440px;
-        margin: 0 auto;
-    }
-
-    .nav-bar {
-        gap: 100px;
-    }
-}
-
 /* CONTENT STYLES */
 
 main {
@@ -175,7 +140,7 @@ footer p {
     }
 }
 
-/* HEADER @MEDIA RULES */
+/* @MEDIA RULES */
 
 @media (min-width: 768px) {
     header, main, footer {
