@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html title="Abdulbasit Yusuf | Frontend Engineer">
+<html lang="en" title="Abdulbasit Yusuf | Frontend Engineer">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="keywords"
+      content="Abdulbasit, Yusuf, Jideotetic, Portfolio"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Yusuf Abdulbasit" />
+    <meta name="author" content="Abdulbasit Yusuf" />
     <meta
       name="description"
-      content="A highly motivated software engineer in training with a flair for building and designing responsive and interactive websites. Interested in frontend web development, customer service and personal growth. I am proficient in HTML/CSS and currently learning Javascript wit incredible ease of adapting and learning new technologies as need be."
+      content="A highly motivated frontend engineer in training with a 
+              flair for building and designing responsive and interactive websites. 
+              Interested in frontend web development, customer service and personal growth. 
+              I am proficient in HTML/CSS and currently learning Javascript wit incredible 
+              ease of adapting and learning new technologies as need be."
     />
     <title>Abdulbasit Yusuf | Frontend Engineer</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
@@ -15,52 +23,56 @@
       src="https://kit.fontawesome.com/d9b8043dd4.js"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js" defer></script>
+    <script src="./index.js" defer></script>
+    
   </head>
+
   <body>
     <header>
-      <nav class="nav-bar">
-        <i class="fa-solid fa-moon" title="Go to Dark Mode"></i>
-        <!-- <a href="about.html" class="about">About</a>
-        <a href="index.html" class="home">Projects</a>
-        <a href="index.html" class="home">Contact</a> -->
-        <i class="fa-solid fa-bars"></i>
+      <nav>
+        <h1><a href="./index.html">ABDULBASIT</a></h1>
+        <ul class="navigations">
+          <li>
+            <a href="./about.html">About</a>
+          </li>
+          <li>
+            <a
+              href="https://docs.google.com/document/d/1rm4HqMnbddgK0TAzcHP0VD7o4UrGba63"
+              target="_blank"
+              class="resume"
+              >Resume</a
+            >
+          </li>
+        </ul>
+
+        <div class="menu-bar-container">
+          <div class="top-menu-bar"></div>
+          <div class="middle-menu-bar"></div>
+          <div class="bottom-menu-bar"></div>
+        </div>
       </nav>
     </header>
+
     <main>
       <section class="intro">
-        <section class="intro-text">
-          <p>Hi, I'm</p>
-          <h1>ABDULBASIT YUSUF.</h1>
-          <p>Frontend Developer.</p>
-        </section>
-        <section class="intro-image">
-          <img
-            src="https://pbs.twimg.com/profile_banners/712517750/1467316469/1080x360"
-            alt=""
-          />
-        </section>
+        <p class="name">Hi, I'm <span>Abdulbasit Yusuf.</span></p>
+        <h2>Frontend Developer.</h2>
       </section>
-      <section class="social">
+      <section class="socials">
         <a href="https://github.com/jideotetic" target="_blank"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/jideotetic/"
-          target="_blank"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
+          ><span class="fa-brands fa-github" aria-hidden="true"></span>
+          <span class="sr-only">Github</span></a
+        >
+        <a href="https://www.linkedin.com/in/jideotetic/" target="_blank"
+          ><span class="fa-brands fa-linkedin" aria-hidden="true"></span
+          ><span class="sr-only">LinkedIn</span></a
+        >
         <a href="https://www.twitter.com/habdulbasheet" target="_blank"
-          ><i class="fa-brands fa-twitter"></i
-        ></a>
-        <a href="https://www.facebook.com/yussuf.abdulbasheet" target="_blank"
-          ><i class="fa-brands fa-facebook"></i
-        ></a>
-        <a href="https://www.instagram.com/jideotetic/" target="_blank"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
+          ><span class="fa-brands fa-twitter" aria-hidden="true"></span
+          ><span class="sr-only">Twitter</span></a
+        >
       </section>
-      <p>Designed by Abdulbasit Yusuf</p>
+      <p>&copy; Designed by Abdulbasit Yusuf</p>
     </main>
   </body>
 </html>
