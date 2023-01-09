@@ -1,147 +1,138 @@
-* {
-  box-sizing: border-box;
+body {
+  margin: 0;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-size: 1em;
+  color: #40514e;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.top-container {
+  background-color: #eaf6f6;
+  padding: 280px 20px 280px 20px;
+  position: relative;
+}
+
+p {
+  line-height: 2;
 }
 
 h1 {
-  margin: 0;
+  color: #66bfbf;
+  font-size: 4.375rem;
+  font-family: "Sacramento", cursive;
 }
 
-body {
-  margin: 0;
-  font-family: "Courier New", Courier, monospace;
-  background-color: rgb(219, 215, 215);
-  animation-name: slideIn;
-  animation-iteration-count: 1;
-  animation-duration: 5s;
-  padding: 1rem;
-}
-
-/* Header style */
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-}
-
-nav h1 a {
-  text-decoration: none;
-  font-style: italic;
-}
-
-nav ul {
-  display: none;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  background-color: rgb(219, 215, 215);
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 90px;
-  padding: 1rem;
-  gap: 100px;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-}
-
-nav ul a {
-  text-decoration: none;
-  color: black;
-}
-
-.menu-bar-container {
-  cursor: pointer;
-}
-
-.top-menu-bar,
-.middle-menu-bar,
-.bottom-menu-bar {
-  background-color: black;
-  width: 35px;
-  height: 5px;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.change .top-menu-bar {
-  transform: translate(0, 11px) rotate(-45deg);
-}
-
-.change .middle-menu-bar {
-  opacity: 0;
-}
-
-.change .bottom-menu-bar {
-  transform: translate(0, -11px) rotate(45deg);
-}
-
-.resume {
-  color: white;
-  background-color: black;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-/* CONTENT STYLES */
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.intro .name {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.name span {
-  font-size: 3rem;
-  display: block;
-  font-weight: bolder;
-}
-
-.intro h2 {
-  font-size: 2rem;
-  line-height: 1.5;
+.top-container h2 {
+  color: #66bfbf;
   font-weight: normal;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
 }
 
-.socials a {
+h2 {
+  color: #66bfbf;
+}
+
+h3 {
+  color: #11999e;
+}
+
+.top-cloud {
+  position: absolute;
+  top: 100px;
+  right: 10px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  top: 600px;
+  left: 10px;
+}
+
+.middle-container {
+  padding: 20px;
+}
+
+.profile {
+  margin: 50px auto 50px auto;
+}
+
+.profile .intro {
+  margin-top: 20px;
+}
+
+.skills {
+  padding-top: 50px;
+}
+
+.abdulbasit-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.skills h2 {
+  margin-bottom: 20px;
+}
+
+.skills img {
+  width: 25%;
+}
+
+.skills div {
+  width: 50%;
+  margin: auto;
+}
+
+.second-hr {
+  border: dotted grey 6px;
+  border-bottom: none;
+  width: 30%;
+}
+
+.last-hr {
+  margin: 20px;
+}
+
+.bottom-container {
+  background-color: #eaf6f6;
+  padding: 50px 20px;
+}
+
+.contact-me {
+  margin-bottom: 50px;
+}
+
+.btn {
+  background: #3498db;
+  border-radius: 10px;
+  font-family: "Merriweather", serif;
+  padding: 10px;
+  color: #40514e;
   text-decoration: none;
 }
 
-
-
-/* @KEYFRAMES RULE */
-
-@keyframes slideIn {
-  0% {
-    margin-top: 500px;
-  }
-
-  100% {
-    margin-bottom: auto;
-  }
+.btn:hover {
+  background: #6ab8ec;
+  text-decoration: none;
 }
 
-/* MEDIA QUERIES */
+a {
+  color: #11999e;
+  text-decoration: none;
+  margin: 10px;
+}
 
-@media screen and (min-width: 768px) {
-  /* HEADER */
-  .menu-bar-container {
-    display: none;
-  }
+a:hover {
+  color: #cad4d4;
+}
 
-  nav ul {
-    display: flex;
-    position: unset;
-    height: unset;
-    flex-direction: row;
-  }
+.copyright {
+  color: #11999e;
+  font-size: 0.75rem;
 }
