@@ -1,96 +1,116 @@
 <!DOCTYPE html>
-<html lang="en" title="Abdulbasit Yusuf | Frontend Engineer">
+<html lang="en" title="Abdulbasit Yusuf | Frontend Developer">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="keywords" content="Abdulbasit, Yusuf, Jideotetic, Portfolio" />
+    <meta
+      name="keywords"
+      content="Abdulbasit, Yusuf, Jideotetic, Portfolio, Olajide, Opeyemi"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Abdulbasit Yusuf" />
     <meta
       name="description"
-      content="A highly motivated frontend engineer in training with a 
-              flair for building and designing responsive and interactive websites. 
-              Interested in frontend web development, customer service and personal growth. 
-              I am proficient in HTML/CSS and currently learning Javascript wit incredible 
-              ease of adapting and learning new technologies as need be."
+      content="Highly motivated frontend developer with a 
+              flair for building and designing responsive
+              and interactive websites. I am proficient in
+              HTML, CSS, Javascript, Git and Github and
+              currently learning React and Vue with incredible 
+              ease of adaptation and learning new technologies as need be."
     />
-    <title>Abdulbasit Yusuf | Frontend Engineer</title>
+    <title>Abdulbasit Yusuf | Frontend Developer</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Solitreo&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js" defer></script>
   </head>
 
-  <body>
-    <main>
-      <section class="top-container">
-        <img src="images/cloud.png" alt="cloud-image" class="top-cloud" />
-        <p class="intro">Hi, I'm</p>
-        <h1>Abdulbasit</h1>
-        <h2>Frontend Engineer.</h2>
-        <img src="images/cloud.png" alt="cloud-image" class="bottom-cloud" />
-      </section>
-      <section class="middle-container">
-        <section class="profile">
-          <img
-            src="https://avatars.githubusercontent.com/u/53506936?v=4"
-            alt="Abdulbasit-image"
-            class="abdulbasit-image"
-          />
-          <p class="intro">
-            I am a Dedicated Junior Front-end Engineer with good knowledge of
-            HTML, CSS, JavaScript, React, Web Accessibility and Search Engine
-            Optimization (SEO).
-          </p>
+  <body onload="handleLoading()">
+    <a href="#main" class="skip-to-main-content-link">Skip to content</a>
+    <div id="loading-spinner-container">
+      <p>🌀</p>
+    </div>
+    <div id="content-container">
+      <header>
+        <h1 class="logo">
+          <a href="index.html">JIDE</a>
+        </h1>
+
+        <input type="checkbox" id="mobile-menu" />
+        <label class="hamburger" for="mobile-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </label>
+        <nav>
+          <ul class="menu">
+            <li><a href="#contact" title="Contact">Contact</a></li>
+            <li><a href="#projects" title="Projects">Projects</a></li>
+            <li><a href="#" title="Writings">Writings</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main">
+        <section id="about">
+          <p class="intro">Hi, I'm</p>
+          <h2>Abdulbasit Yusuf</h2>
+          <p>Frontend Developer.</p>
         </section>
         <hr />
-        <section class="skills">
-          <h2>My Skills</h2>
-          <div>
-            <img src="images/html.jpg" alt="html-image" />
-            <h3>HTML</h3>
-          </div>
-          <div>
-            <img src="images/css.png" alt="css-image" />
-            <h3>CSS</h3>
-          </div>
-          <div>
-            <img src="images/javascript.jpg" alt="javascript-image" />
-            <h3>JavaScript</h3>
-          </div>
-          <div>
-            <img src="images/react.png" alt="react-image" />
-            <h3>React</h3>
-          </div>
-          <div>
-            <img src="images/git-github.jpg" alt="" />
-            <h3>Git & Github</h3>
-          </div>
+        <section id="projects">
+          <h2>Projects</h2>
+          <section class="typing-test">
+            <img src="./images/typing-test.png" alt="" />
+            <p>
+              Typing Test is a webapp to test and practice your typing skills in
+              order to enhance them. In the App, words and sentences are
+              generated randomly to ensure no repetition of a word or a
+              sentence. Check out the live site
+              <a href="https://typing-test-project.vercel.app">here</a>.
+            </p>
+          </section>
+          <section class="calculator">
+            <img src="./images/calculator.png" alt="" />
+            <p>
+              Calculator app build with React.js, Check out the app
+              <a href="https://en8r56.csb.app/">here</a>.
+            </p>
+          </section>
         </section>
-        <hr class="second-hr" />
-      </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <form action="" method="GET">
+            <label for="name"> Name </label> <br>
+            <input type="text" name="name" id="name" /> <br>
 
-      <section class="bottom-container">
-        <section class="contact-me">
-          <a class="btn" href="mailto:jideotetic@gmail.com">CONTACT ME</a>
+            <label for="email"> Email </label> <br>
+            <input type="email" name="email" id="email" /> <br>
+
+            <label for="message"> Message </label> <br>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea> <br>
+
+            <button type="submit">Send</button>
+          </form>
+          <hr />
         </section>
-        <section class="socials">
-          <a href="https://github.com/jideotetic" target="_blank">Github</a>
-          <a href="https://www.linkedin.com/in/jideotetic/" target="_blank"
-            >Linkedin</a
-          >
-          <a href="https://www.twitter.com/habdulbasheet" target="_blank"
-            >Twitter</a
-          >
-        </section>
-      </section>
-    </main>
-    <hr class="last-hr" />
-    <footer>
-      <p class="copyright">© 2023 Abdulbasit Yusuf</p>
-    </footer>
+      </main>
+
+      <footer>
+        <p class="copyright">© 2023 Abdulbasit Yusuf</p>
+      </footer>
+    </div>
   </body>
 </html>
