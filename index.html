@@ -1,114 +1,104 @@
 <!DOCTYPE html>
-<html lang="en" title="Abdulbasit Yusuf | Frontend Developer">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="keywords"
-      content="Abdulbasit, Yusuf, Jideotetic, Portfolio, Olajide, Opeyemi"
-    />
+      content="Abdulbasit Yusuf, Jideotetic, Portfolio, HTML, CSS" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Abdulbasit Yusuf" />
+    <meta name="color-scheme" content="dark light" />
     <meta
       name="description"
-      content="Highly motivated frontend developer with a 
-              flair for building and designing responsive
-              and interactive websites. I am proficient in
-              HTML, CSS, Javascript, Git and Github and
+      content="Front-End developer with entry level experience
+              specializing in Web Development, interested in building 
+              Accessible Web and Search Engine Optimized web.
+              Seeking internship opportunities in a growth enabling
+              firm where I will be able to consolidate all I’ve learnt
+              in theory and built in practice into a real-life project
+              working with a team and learning along the process.
+              I am proficient in HTML, CSS and Javascript and
               currently learning React and Vue with incredible 
-              ease of adaptation and learning new technologies as need be."
-    />
+              ease of adaptation and learning new technologies as need be." />
     <title>Abdulbasit Yusuf | Frontend Developer</title>
-    <link href="styles.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Solitreo&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
     <script src="index.js" defer></script>
   </head>
 
   <body onload="handleLoading()">
-    <a href="#main" class="skip-to-main-content-link">Skip to content</a>
-    <div id="loading-spinner-container">
-      <p>🌀</p>
-    </div>
+    <!-- handleLoading IS WILL BE CALLED WHEN THE PAGE FINISH LOADING -->
+
+    <!-- LINK TO SKIP TO MAIN CONTENT OF THE PAGE  -->
+    <a href="#main" id="skip-to-main-content" title="Skip to content"
+      >Skip to content</a
+    >
+
+    <!-- LOADING SPINNER START -->
+    <div id="loading-spinner" title="Loading">🌀</div>
+    <!-- LOADING SPINNER END -->
+
     <div id="content-container">
-      <header>
-        <h1 class="logo">
-          <a href="index.html">JIDE</a>
+      <!-- content-container IS TO HIDE THE CONTENT OF THE PAGE WHILE LOADING AND A SPINNER IS SHOWING -->
+
+      <header id="header">
+        <h1 class="header-logo">
+          <a href="/">JIDE</a>
         </h1>
 
-        <input type="checkbox" id="mobile-menu" />
-        <label class="hamburger" for="mobile-menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+        <input type="checkbox" id="toggle" />
+        <label class="toggle-btn" for="toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </label>
-        <nav>
-          <ul class="menu">
-            <li><a href="#contact" title="Contact">Contact</a></li>
-            <li><a href="#projects" title="Projects">Projects</a></li>
-            <li><a href="#" title="Writings">Writings</a></li>
+
+        <nav id="nav-bar">
+          <ul>
+            <li><a href="/#about" title="About" class="nav-link">About</a></li>
+            <li>
+              <a href="/#projects" title="Projects" class="nav-link"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="/#contact" title="Contact" class="nav-link">Contact</a>
+            </li>
           </ul>
         </nav>
       </header>
       <main id="main">
         <section id="about">
-          <p class="intro">Hi, I'm</p>
-          <h2>Abdulbasit Yusuf</h2>
-          <p>Frontend Developer.</p>
+          <img
+            src="https://readme-typing-svg.demolab.com?font=Nabla&size=40&pause=1000&center=true&vCenter=true&width=435&lines=Hello;I'm+Abdulbasit+Yusuf;Frontend+Developer"
+            alt="Typing SVG" />
         </section>
         <hr />
         <section id="projects">
           <h2>Projects</h2>
-          <section class="typing-test">
-            <img src="./images/typing-test.png" alt="" />
-            <p>
-              Typing Test is a webapp to test and practice your typing skills in
-              order to enhance them. In the App, words and sentences are
-              generated randomly to ensure no repetition of a word or a
-              sentence. Check out the live site
-              <a href="https://typing-test-project.vercel.app">here</a>.
-            </p>
-          </section>
-          <section class="calculator">
-            <img src="./images/calculator.png" alt="" />
-            <p>
-              Calculator app build with React.js, Check out the app
-              <a href="https://en8r56.csb.app/">here</a>.
-            </p>
-          </section>
+          <div class="projects-wrapper">
+            <div class="project-tile">
+              <img src="./images/typing-test.png" alt="Typing test" />
+              <a href="https://typing-test-project.vercel.app/">Typing Test</a>
+            </div>
+            <div class="project-tile">
+              <img src="./images/calculator.png" alt="Calculator" />
+              <a href="https://en8r56.csb.app/">Calculator</a>
+            </div>
+          </div>
+          <!-- <a href="/projects.html">More Projects</a> -->
         </section>
-        <section id="contact">
+        <hr />
+        <!-- <section id="contact">
           <h2>Contact</h2>
-          <form action="" method="GET">
-            <label for="name"> Name </label> <br>
-            <input type="text" name="name" id="name" /> <br>
-
-            <label for="email"> Email </label> <br>
-            <input type="email" name="email" id="email" /> <br>
-
-            <label for="message"> Message </label> <br>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-            ></textarea> <br>
-
-            <button type="submit">Send</button>
-          </form>
-          <hr />
-        </section>
+        </section> -->
       </main>
 
-      <footer>
+      <footer id="footer">
         <p class="copyright">© 2023 Abdulbasit Yusuf</p>
       </footer>
     </div>
