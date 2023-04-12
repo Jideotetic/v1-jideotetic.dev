@@ -154,7 +154,6 @@ input:checked ~ .toggle-btn .bar:nth-of-type(3) {
 }
 
 #projects {
-  height: 100vh;
   margin-top: 50px;
   text-align: center;
   padding-bottom: 20px;
@@ -162,8 +161,8 @@ input:checked ~ .toggle-btn .bar:nth-of-type(3) {
 
 .projects-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
@@ -177,11 +176,6 @@ input:checked ~ .toggle-btn .bar:nth-of-type(3) {
   width: 100%;
   height: auto;
 }
-
-/* #contact {
-  height: 100vh;
-  margin-top: 50px;
-} */
 
 h2 {
   font-family: "Nabla", cursive;
@@ -224,12 +218,11 @@ h2 {
   }
 
   .projects-wrapper {
-    flex-direction: row;
     column-gap: 20px;
   }
 
   .project-tile {
-    width: 50%;
+    width: 45%;
   }
 }
 
