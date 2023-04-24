@@ -250,7 +250,7 @@ footer {
 
   nav {
     position: relative;
-    grid-column: 8/12;
+    grid-column: 9/12;
     height: auto;
     max-height: unset;
   }
