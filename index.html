@@ -2,42 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="color-scheme" content="light dark" />
     <meta
       name="keywords"
       content="Abdulbasit Yusuf, Jideotetic, Portfolio, HTML, CSS" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Abdulbasit Yusuf" />
-    <meta name="color-scheme" content="dark light" />
     <meta
       name="description"
       content="Front-End developer with entry level experience
               specializing in Web Development, interested in building 
               Accessible Web and Search Engine Optimized web.
-              Seeking internship opportunities in a growth enabling
-              firm where I will be able to consolidate all I’ve learnt
-              in theory and built in practice into a real-life project
-              working with a team and learning along the process.
               I am proficient in HTML, CSS and Javascript and
               currently learning React and Vue with incredible 
               ease of adaptation and learning new technologies as need be." />
     <title>Abdulbasit Yusuf | Frontend Developer</title>
+    <link rel="shortcut icon" href="images/JD.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Nabla&display=swap"
       rel="stylesheet" />
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
     <script src="index.js" defer></script>
   </head>
 
-  <body onload="handleLoading()">
-    <!-- handleLoading IS WILL BE CALLED WHEN THE PAGE FINISH LOADING -->
-
+  <body>
     <!-- LINK TO SKIP TO MAIN CONTENT OF THE PAGE  -->
     <a href="#main" id="skip-to-main-content" title="Skip to content"
       >Skip to content</a
     >
-
     <!-- LOADING SPINNER START -->
     <div id="loading-spinner" title="Loading">🌀</div>
     <!-- LOADING SPINNER END -->
@@ -45,32 +39,48 @@
     <div id="content-container">
       <!-- content-container IS TO HIDE THE CONTENT OF THE PAGE WHILE LOADING AND A SPINNER IS SHOWING -->
 
-      <header id="header">
-        <h1 class="header-logo">
-          <a href="/">JIDE</a>
+      <!-- HEADER START -->
+      <header>
+        <h1>
+          <a href="/">JD</a>
         </h1>
 
-        <input type="checkbox" id="toggle" />
+        <!-- THEME SWITCHER START -->
+
+        <input type="checkbox" id="theme" autocomplete="off" />
+        <label for="theme" class="theme-label">
+          <span class="dark-mode-icon" title="switch to dark mode">🌙</span>
+          <span class="light-mode-icon" title="switch to light mode">🌞</span>
+        </label>
+
+        <!-- THEME SWITCHER END -->
+
+        <!-- HAMBURGER MENU START -->
+        <input type="checkbox" id="toggle" autocomplete="off" />
         <label class="toggle-btn" for="toggle">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
         </label>
+        <!-- HAMBURGER MENU END -->
 
-        <nav id="nav-bar">
+        <!-- NAVIGATION BAR START -->
+        <nav>
           <ul>
-            <li><a href="/#about" title="About" class="nav-link">About</a></li>
+            <li><a href="#about" title="About" class="nav-link">About</a></li>
             <li>
-              <a href="/#projects" title="Projects" class="nav-link"
-                >Projects</a
-              >
+              <a href="#projects" title="Projects" class="nav-link">Projects</a>
             </li>
             <li>
-              <a href="/#contact" title="Contact" class="nav-link">Contact</a>
+              <a href="blog.html" title="Blog" class="nav-link">Blog</a>
             </li>
           </ul>
         </nav>
+        <!-- NAVIGATION BAR END -->
       </header>
+      <!-- HEADER END -->
+
+      <!-- MAIN CONTENT START -->
       <main id="main">
         <section id="about">
           <img
@@ -83,17 +93,32 @@
           <div class="projects-wrapper">
             <div class="project-tile">
               <img src="./images/typing-test.png" alt="Typing test" />
-              <a href="https://typing-test-project.vercel.app/">Typing Test</a>
+              <p class="project-description">
+                <a
+                  href="https://typing-test-project.vercel.app/"
+                  class="project-description"
+                  >Typing Test</a
+                >
+                is an open source project where i collaborated and implement the
+                mobile menu bar.
+              </p>
             </div>
             <div class="project-tile">
               <img src="./images/calculator.png" alt="Calculator" />
-              <a href="https://en8r56.csb.app/">Calculator</a>
+              <p class="project-description">
+                <a href="https://en8r56.csb.app/" class="project-description"
+                  >Calculator</a
+                >
+                app built with React
+              </p>
             </div>
-            <div class="project-tile">
+            <!-- <div class="project-tile">
               <img
                 src="./images/career-check-form.png"
                 alt="Career check form" />
-              <a href="https://career-checker-form.netlify.app/"
+              <a
+                href="https://career-checker-form.netlify.app/"
+                class="project-description"
                 >Career Check Form</a
               >
             </div>
@@ -101,24 +126,26 @@
               <img
                 src="./images/product-landing-page.png"
                 alt="Product landing page" />
-              <a href="https://product-landin-page.netlify.app/"
+              <a
+                href="https://product-landin-page.netlify.app/"
+                class="project-description"
                 >Product Landing Page</a
               >
             </div>
             <div class="project-tile">
               <img src="./images/tech-doc.png" alt="Javascript docs" />
-              <a href="https://jideotetic-tech-doc.netlify.app/"
+              <a
+                href="https://jideotetic-tech-doc.netlify.app/"
+                class="project-description"
                 >Javascript Docs</a
               >
-            </div>
+            </div> -->
           </div>
-          <!-- <a href="/projects.html">More Projects</a> -->
         </section>
         <hr />
-        <!-- <section id="contact">
-          <h2>Contact</h2>
-        </section> -->
+        <section></section>
       </main>
+      <!-- MAIN CONTENT END -->
 
       <footer id="footer">
         <p class="copyright">© 2023 Abdulbasit Yusuf</p>
