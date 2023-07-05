@@ -105,6 +105,12 @@ const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 const mobileNavToggler = document.getElementById('hamburger-icon');
 const navBar = document.querySelector('.main-nav-bar');
 
+console.log(
+  themeToggler.checked,
+  prefersDarkScheme.matches,
+  mobileNavToggler.checked
+);
+
 // Get user preferred theme from local storage for future visits
 let theme = localStorage.getItem('theme');
 
@@ -165,7 +171,18 @@ function expandMobileNav() {
   }
 }
 
+function handleMobileNavOnResize() {
+  if (window.innerWidth >= 768) {
+    navBar.classList.remove('mobile-nav');
+  } else if (window.innerWidth < 768 && mobileNavToggler.checked) {
+    navBar.classList.add('mobile-nav');
+  } else {
+    navBar.classList.remove('mobile-nav');
+  }
+}
+
 loadTheme();
 prefersDarkScheme.addEventListener('change', changeThemeOnOSPreferenceChange);
 themeToggler.addEventListener('click', changeThemeOnToggle);
 mobileNavToggler.addEventListener('click', expandMobileNav);
+window.addEventListener('resize', handleMobileNavOnResize);

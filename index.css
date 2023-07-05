@@ -32,7 +32,6 @@ body {
   background-color: var(--body-bg-color);
   color: var(--text-color);
   font-family: 'Merriweather Sans', sans-serif;
-  border: 1px solid red;
   transition: all 0.5s ease-in-out;
   padding: 0.5rem;
 }
@@ -95,7 +94,6 @@ header {
   overflow: hidden;
   height: 100%;
   transition: all 0.5s ease-in-out;
-  border: 1px solid red;
   background-color: var(--body-bg-color);
 }
 
@@ -188,7 +186,6 @@ header {
     max-width: 500px;
     width: 100%;
     transition: all 0.5s ease-in-out;
-    border: 1px solid red;
   }
 
   .main-nav-links {
