@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;800&family=Nabla&display=swap"
       rel="stylesheet" />
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script src="index.js" defer></script>
@@ -25,88 +25,10 @@
   <body>
     <!-- LINK TO SKIP TO MAIN CONTENT OF THE PAGE  -->
     <a href="#main" id="skip-to-main-content">Skip to content</a>
-    <header>
-      <a href="/" class="logo" title="Home">JD</a>
-      <nav class="main-nav-bar">
-        <ul class="main-nav-links">
-          <li><a href="/" title="Home" class="nav-link">Home</a></li>
-          <li><a href="#" title="About" class="nav-link">About</a></li>
-          <li>
-            <a href="#" title="Projects" class="nav-link">Projects</a>
-          </li>
-          <li>
-            <a href="#" title="Contact" class="nav-link">Contact</a>
-          </li>
-          <li>
-            <input
-              aria-hidden="true"
-              type="checkbox"
-              id="theme-icon"
-              autocomplete="off" />
-            <label for="theme-icon" class="theme-icon-container">
-              <span class="dark-mode-icon" title="switch to dark mode">🌙</span>
-              <span class="light-mode-icon" title="switch to light mode"
-                >🌞</span
-              >
-            </label>
-          </li>
-        </ul>
-      </nav>
-      <div class="hamburger-icon-container">
-        <input
-          aria-hidden="true"
-          type="checkbox"
-          id="hamburger-icon"
-          autocomplete="off" />
-        <label class="hamburger-icon" for="hamburger-icon">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </label>
-      </div>
-    </header>
-    <main id="main">
-      <section class="profession">
-        <h2>Hello, I'm Abdulbasit Yusuf</h2>
-        <p>Frontend Developer</p>
-      </section>
-      <hr />
-    </main>
-    <!-- LOADING SPINNER START -->
-    <!-- <div id="loading-spinner" title="Loading">🌀</div> -->
-    <!-- LOADING SPINNER END -->
-
-    <!-- <div id="content-container"> -->
-    <!-- content-container IS TO HIDE THE CONTENT OF THE PAGE WHILE LOADING AND A SPINNER IS SHOWING -->
-
-    <!-- HEADER START -->
-    <!-- <header>
-        <h1>
-          <a href="/">JD</a>
-        </h1> -->
-
-    <!-- THEME SWITCHER START -->
-
-    <!-- <input type="checkbox" id="theme" autocomplete="off" />
-        <label for="theme" class="theme-label">
-          <span class="dark-mode-icon" title="switch to dark mode">🌙</span>
-          <span class="light-mode-icon" title="switch to light mode">🌞</span>
-        </label> -->
-
-    <!-- THEME SWITCHER END -->
-
-    <!-- HAMBURGER MENU START -->
-    <!-- <input type="checkbox" id="toggle" autocomplete="off" />
-        <label class="toggle-btn" for="toggle">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </label> -->
-    <!-- HAMBURGER MENU END -->
-
-    <!-- NAVIGATION BAR START -->
-    <!-- <nav>
-          <ul>
+      <header>
+        <a href="/" class="logo" title="Home">JD</a>
+        <nav class="main-nav-bar">
+          <ul class="main-nav-links">
             <li><a href="/" title="Home" class="nav-link">Home</a></li>
             <li><a href="#about" title="About" class="nav-link">About</a></li>
             <li>
@@ -115,86 +37,83 @@
             <li>
               <a href="#contact" title="Contact" class="nav-link">Contact</a>
             </li>
+            <li>
+              <input
+                aria-hidden="true"
+                type="checkbox"
+                id="theme-icon"
+                autocomplete="off" />
+              <label for="theme-icon" class="theme-icon-container">
+                <span class="dark-mode-icon" title="switch to dark mode"
+                  >🌙</span
+                >
+                <span class="light-mode-icon" title="switch to light mode"
+                  >🌞</span
+                >
+              </label>
+            </li>
           </ul>
-        </nav> -->
-    <!-- NAVIGATION BAR END -->
-    <!-- </header> -->
-    <!-- HEADER END -->
-
-    <!-- MAIN CONTENT START -->
-    <!-- <main id="main">
-        <section id="about">
-          <h2>Hello, I'm Abdulbasit Yusuf</h2>
-          <p>Frontend Engineer</p> -->
-    <!-- <img
-            src="https://readme-typing-svg.demolab.com?font=Nabla&size=40&pause=1000&center=true&vCenter=true&width=435&lines=Hello;I'm+Abdulbasit+Yusuf;Frontend+Developer"
-            alt="Typing SVG" /> -->
-    <!-- </section>
-        <hr />
-        <section id="projects">
-          <h2>Projects</h2>
-          <div class="projects-wrapper">
-            <div class="project-tile">
-              <img
-                src="./images/roman-numeral-converter.png"
-                alt="Typing test" />
-              <p class="project-description">
-                <a
-                  href="https://typing-test-project.vercel.app/"
-                  class="project-description"
-                  >Typing Test</a
-                >
-                is an open source project where i collaborated and implement the
-                mobile menu bar.
-              </p>
-            </div>
-            <div class="project-tile">
-              <img src="./images/calculator.png" alt="Calculator" />
-              <p class="project-description">
-                <a href="https://en8r56.csb.app/" class="project-description"
-                  >Calculator</a
-                >
-                app built with React
-              </p>
-            </div> -->
-    <!-- <div class="project-tile">
-              <img
-                src="./images/career-check-form.png"
-                alt="Career check form" />
-              <a
-                href="https://career-checker-form.netlify.app/"
-                class="project-description"
-                >Career Check Form</a
-              >
-            </div>
-            <div class="project-tile">
-              <img
-                src="./images/product-landing-page.png"
-                alt="Product landing page" />
-              <a
-                href="https://product-landin-page.netlify.app/"
-                class="project-description"
-                >Product Landing Page</a
-              >
-            </div>
-            <div class="project-tile">
-              <img src="./images/tech-doc.png" alt="Javascript docs" />
-              <a
-                href="https://jideotetic-tech-doc.netlify.app/"
-                class="project-description"
-                >Javascript Docs</a
-              >
-            </div> -->
-    <!-- </div>
+        </nav>
+        <div class="hamburger-icon-container">
+          <input
+            aria-hidden="true"
+            type="checkbox"
+            id="hamburger-icon"
+            autocomplete="off" />
+          <label class="hamburger-icon" for="hamburger-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </label>
+        </div>
+      </header>
+      <main id="main">
+        <section class="profession">
+          <h2>Hello, I'm ABDULBASIT YUSUF</h2>
+          <p>Frontend Developer</p>
         </section>
         <hr />
-        <section></section>
-      </main> -->
-    <!-- MAIN CONTENT END -->
-
-    <!-- <footer id="footer">
+        <section class="about" id="about">
+          <h3>ABOUT</h3>
+          <div>
+            <img src="./images/abdlbasit-yusuf.jpg" alt="Abdulbasit Yusuf" />
+            <div class="about-content">
+              <p>
+                I am a highly motivated Front-end developer in training seeking
+                entry level role, interested in building responsive,
+                interactive, accessible and search engine optimized web. Skilled
+                with HTML5, CSS3, JavaScript, Git & Github with incredible ease
+                of adaptation and learning new technologies as need be.
+              </p>
+              <ul class="socials">
+                <li>
+                  <a
+                    href="
+                      https://www.linkedin.com/in/jideotetic/"
+                    title="LinkedIn"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="
+                      https://github.com/Jideotetic"
+                    title="Github"
+                    target="_blank"
+                    >Github</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+      </main>
+      <footer>
         <p class="copyright">© 2023 Abdulbasit Yusuf</p>
       </footer>
-    </div> -->
+
+    <!-- LOADING SPINNER START -->
+    <!-- <div id="loading-spinner" title="Loading">🌀</div> -->
+    <!-- LOADING SPINNER END -->
   </body>
 </html>
