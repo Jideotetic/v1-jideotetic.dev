@@ -4,6 +4,9 @@ const lightModeIcon = document.querySelector('.light-mode-icon');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 const mobileNavToggler = document.getElementById('hamburger-icon');
 const navLinks = document.querySelector('.main-nav-links');
+const navLink = document.querySelector('.main-nav-links').children;
+
+console.log(navLink);
 
 // Get user preferred theme from local storage for future visits
 let theme = localStorage.getItem('theme');
@@ -74,6 +77,13 @@ function handleMobileNavOnResize() {
     navBar.classList.remove('mobile-nav');
   }
 }
+
+navLinks.addEventListener('click', () => {
+  if (navLinks.classList.contains('mobile-nav')) {
+    mobileNavToggler.checked = false;
+    navLinks.classList.remove('mobile-nav');
+  }
+});
 
 loadTheme();
 prefersDarkScheme.addEventListener('change', changeThemeOnOSPreferenceChange);
