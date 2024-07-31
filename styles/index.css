@@ -1,4 +1,15 @@
-:root {
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+/* :root {
   font-size: 16px;
   --bg-color: rgb(255, 155, 0);
   --border-color: #5d73a3;
@@ -289,4 +300,4 @@ footer {
   main {
     padding: 0;
   }
-}
+} */
