@@ -3,8 +3,8 @@
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	padding-bottom: 20px;
+	border: 1px solid red;
 }
 
 .nav-bar-container {
@@ -51,6 +51,7 @@
 	align-items: center;
 	justify-content: center;
 	padding: 70px 10px 0;
+	flex: 1;
 }
 
 .profile-picture img {
@@ -77,10 +78,6 @@ h2 {
 @media screen and (min-width: 425px) {
 	.nav-links {
 		gap: 40px;
-	}
-
-	.hero {
-		flex: 1;
 	}
 }
 
