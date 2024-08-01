@@ -1,6 +1,7 @@
 html {
 	box-sizing: border-box;
 	font-family: "Merriweather Sans", sans-serif;
+	scroll-behavior: smooth;
 }
 
 *,
@@ -9,6 +10,7 @@ html {
 	margin: 0;
 	padding: 0;
 	box-sizing: inherit;
+	line-height: 1.5;
 	/* border: 1px solid red; */
 }
 
@@ -16,118 +18,105 @@ a {
 	text-decoration: none;
 }
 
-#header {
-	background-color: #1f2937;
+#skip-to-main-content {
+	position: fixed;
+	left: -999px;
+	z-index: 1;
+	background-color: white;
+	padding: 2px;
+	color: #1f2937;
+	margin: 10px;
+}
+
+#skip-to-main-content:focus {
+	left: 0;
+}
+
+#main {
+	color: #1f2937;
+}
+
+#main .resume-container,
+#main .projects-container,
+#main .contact-container {
+	background-color: #fff;
 	padding: 10px;
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
 }
 
-.main-nav-bar {
+#main .projects-container {
+	background-color: #e5e7eb;
+}
+
+#main #resume,
+#main #projects,
+#main #contact {
+	color: #1f2937;
 	max-width: 1024px;
 	width: 100%;
 	margin: 0 auto;
-	display: flex;
-	position: fixed;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	background-color: #1f2937;
-	padding: 0 10px;
+	padding: 60px 0 0;
 }
 
-.logo {
-	margin-right: auto;
-	font-family: "Nabla", cursive;
-	font-size: 32px;
-}
-
-.main-nav-links {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	list-style-type: none;
-	gap: 10px;
-}
-
-.main-nav-links a {
-	font-size: 16px;
-	color: #e5e7eb;
-}
-
-.hero {
-	max-width: 1024px;
-	width: 100%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding-top: 50px;
-}
-
-.profession p {
-	font-size: 16px;
-	color: #e5e7eb;
-	text-align: center;
-}
-
-.profession h2 {
-	font-size: 32px;
-	color: #f9faf8;
-	text-align: center;
+h3 {
+	font-size: 42px;
+	text-transform: uppercase;
 	margin-bottom: 20px;
 }
 
-.profile-picture img {
-	width: 100%;
-	height: auto;
-	max-width: 200px;
-	border-radius: 50%;
-	object-fit: cover;
-	background-image: linear-gradient(to top, white, #1f2937);
+.resume-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
 }
 
-@media screen and (min-width: 425px) {
-	.main-nav-links {
-		gap: 40px;
-	}
-
-	.hero {
-		flex: 1;
-	}
+h4 {
+	font-size: 32px;
 }
 
-@media screen and (min-width: 768px) {
-	.hero {
-		flex-direction: row-reverse;
-		gap: 20px;
-	}
+.download-icon {
+	width: 20px;
+	height: 20px;
+}
 
-	.profession {
-		flex: 2;
-	}
+hr {
+	margin-bottom: 15px;
+}
 
-	.profile-picture {
-		flex: 1;
-		display: flex;
-		justify-content: flex-end;
-	}
+.career-summary {
+	margin-bottom: 20px;
+	text-align: justify;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
 
-	.profession h2 {
-		font-size: 42px;
-		text-align: left;
-	}
+.skills {
+	margin-bottom: 20px;
+}
 
-	.profession p {
-		text-align: justify;
-	}
+.skills p {
+	display: flex;
+	gap: 10px;
+}
+
+.experience {
+	margin-bottom: 20px;
+}
+
+.educations {
+	margin-bottom: 20px;
+}
+
+.projects-link {
+	color: black;
+	text-decoration: underline;
 }
 
 @media screen and (min-width: 1024px) {
-	.hero {
-		padding-top: unset;
+	#skip-to-main-content:focus {
+		left: calc(50% - 512px);
 	}
 }
 

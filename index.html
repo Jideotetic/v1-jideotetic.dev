@@ -7,82 +7,237 @@
 		<meta name="author" content="Abdulbasit Yusuf" />
 		<meta
 			name="description"
-			content="I’m a highly motivated Front-end developer highly invested in building responsive user interfaces, accessible websites and web applications. I specialize in JavaScript and have experience working with Git & Github, HTML5, CSS3, Tailwindcss and React with incredible ease of adaptation and learning new technologies as need be." />
+			content="I’m a highly motivated Front-end developer highly invested in building responsive user interfaces, accessible websites and web applications. I specialize in JavaScript and have experience working with Git & Github, HTML5, CSS3, Tailwindcss and React with incredible ease of adaptation and learning new technologies as need be."
+		/>
 		<link rel="shortcut icon" href="images/JD.ico" type="image/x-icon" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;800&family=Nabla&display=swap"
-			rel="stylesheet" />
+			rel="stylesheet"
+		/>
 		<link href="styles/index.css" rel="stylesheet" type="text/css" />
+		<link href="styles/header.css" rel="stylesheet" type="text/css" />
 		<script src="scripts/index.js" defer></script>
 		<title>Abdulbasit Yusuf | Frontend Developer</title>
 	</head>
 	<body>
 		<!-- LINK TO SKIP TO MAIN CONTENT OF THE PAGE  -->
-		<!-- <a href="#main" id="skip-to-main-content">Skip to content</a> -->
+		<a href="#main" id="skip-to-main-content">Skip to content</a>
 		<header id="header">
-			<nav class="main-nav-bar">
-				<h1 class="logo">
-					<a href="/" title="Home">JD</a>
-				</h1>
-				<ul class="main-nav-links">
-					<li><a href="#resume" title="Resume" class="nav-link">Resume</a></li>
-					<li>
-						<a href="#projects" title="Projects" class="nav-link">Projects</a>
-					</li>
-					<li>
-						<a href="#contact" title="Contact" class="nav-link">Contact</a>
-					</li>
-					<!-- <li>
-						<input
-							aria-hidden="true"
-							type="checkbox"
-							id="theme-icon"
-							autocomplete="off" />
-						<label for="theme-icon" class="theme-icon-container">
-							<span class="dark-mode-icon" title="switch to dark mode">🌙</span>
-							<span class="light-mode-icon" title="switch to light mode"
-								>🌞</span
-							>
-						</label>
-					</li> -->
-				</ul>
-			</nav>
-			<!-- <div class="hamburger-icon-container">
-				<input
-					aria-hidden="true"
-					type="checkbox"
-					id="hamburger-icon"
-					autocomplete="off" />
-				<label class="hamburger-icon" for="hamburger-icon">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
-				</label>
-			</div> -->
-			<section class="hero">
+			<div class="nav-bar-container">
+				<nav class="nav-bar">
+					<h1 class="logo">
+						<a href="/" title="Home">JD</a>
+					</h1>
+
+					<ul class="nav-links">
+						<li>
+							<a href="#resume" title="Resume" class="nav-link">Resume</a>
+						</li>
+						<li>
+							<a href="#projects" title="Projects" class="nav-link">Projects</a>
+						</li>
+						<li>
+							<a href="#contact" title="Contact" class="nav-link">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="hero">
 				<div class="profile-picture">
 					<img
 						src="images/profile-picture-removebg-preview.png"
 						alt="Profile picture"
 						width="300"
-						height="300" />
+						height="300"
+					/>
 				</div>
 
-				<div class="profession">
+				<div class="intro">
 					<h2>Hi, 👋🏻 I'm ABDULBASIT YUSUF</h2>
-					<p
-						><strong>Frontend Developer</strong> 🧑🏻‍💻 and a graduate of
+					<p>
+						<strong>Frontend Developer</strong> 🧑🏻‍💻 and a graduate of
 						Biochemistry 🧑‍🔬 highly invested in building responsive user
 						interfaces, accessible websites and web applications. I specialize
 						in JavaScript and have experience working with Git & Github, HTML5,
 						CSS3, Tailwindcss and React with incredible ease of adaptation and
-						learning new technologies as need be.</p
-					>
+						learning new technologies as need be.
+					</p>
 				</div>
-			</section>
+			</div>
 		</header>
+
+		<main id="main">
+			<div class="resume-container">
+				<section id="resume">
+					<div class="resume-title">
+						<h4>Abdulbasit Yusuf</h4>
+						<a href="#" title="Download Resume" download
+							><img src="/images/download.svg" alt="icon" class="download-icon"
+						/></a>
+					</div>
+					<hr />
+					<div class="career-summary">
+						<p>
+							As a graduate in Biochemistry and a Frontend Developer, I am
+							driven by a passion for leveraging technology to tackle real-world
+							challenges. Equipped with a robust understanding of Computer
+							Science and Engineering principles, along with proficiency in
+							programming languages like JavaScript and Typescript. I am
+							continuously exploring avenues to expand my knowledge and apply my
+							expertise in novel and inventive ways.
+						</p>
+						<p>
+							Beyond my academic endeavors, I have undertaken internships
+							enriching my skill set through involvement in intricate software
+							initiatives. I thrive as a collaborative team member, relishing
+							opportunities to engage with peers and contribute insights.
+						</p>
+						<p>
+							I am thrilled to embark on a journey of continual learning and
+							advancement as a software engineer. I am enthusiastic about
+							utilizing my skills and expertise to address complex challenges
+							and contribute positively to our world.
+						</p>
+					</div>
+					<div class="skills">
+						<h4>Skills</h4>
+						<hr />
+						<p><strong>Languages:</strong> JavaScript, Typescript</p>
+						<p>
+							<strong>Frameworks/Libraries:</strong> NextJs, React, Redux,
+							Tailwindcss
+						</p>
+						<p><strong>Storages/Databases:</strong> Firestore</p>
+						<p><strong>Tooling:</strong> Git</p>
+					</div>
+
+					<div class="experience">
+						<h4>Experience</h4>
+						<hr />
+						<div>
+							<strong>Accion Microfinance Bank - </strong>Frontend Developer
+							<br />
+							<strong>July, 2024 - Till Date</strong>
+							<ul>
+								<li></li>
+							</ul>
+						</div>
+
+						<div>
+							<strong>Hackcity Tech - </strong>Frontend Developer Intern
+							<br />
+							<strong>March - May, 2024</strong>
+							<ul>
+								<li></li>
+							</ul>
+						</div>
+
+						<div>
+							<strong>Phillips Outsourcing - </strong>Customer Experience
+							Officer
+							<br />
+							<strong>June, 2022 - July, 2024</strong>
+							<ul>
+								<li>
+									Receives enquiries, requests and complaints and attend to them
+									in a timely manner to improve customer satisfaction and
+									retention.
+								</li>
+								<li>
+									Analyses of data on a daily, weekly and monthly basis to help
+									inform in decision making towards implementing new products
+									and improving existing ones that will drive sales.
+								</li>
+								<li></li>
+							</ul>
+						</div>
+
+						<div>
+							<strong>Algorithm Engineering Ltd - </strong>Field Engineer
+							<br />
+							<strong>January, 2020 - February, 2022</strong>
+							<ul>
+								<li>
+									Installation and commissioning Nokia and ZTE Radio Access
+									Network (RAN) and Nokia Microwave (MW) dish.
+								</li>
+								<li>
+									Lead a team of 3 in the Airtel swap from Huawei to Nokia RAN
+									in the year 2021 with a high turnout of 3 sites per week that
+									spans for the period of 3 months in the Northern part of
+									Nigeria.
+								</li>
+								<li>
+									Trained Industrial Attachment students on the installation and
+									commissioning of Nokia RAN, MW dish and ZTE RAN.
+								</li>
+								<li>
+									Performed Technical Site Survey and Report (TSSR) to estimate
+									the materials needed to be supplied for installation so as not
+									to have shortage and delay.
+								</li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="educations">
+						<h4>Educations</h4>
+						<hr />
+						<p>
+							<strong> Usmanu Dan Fodiyo University </strong>
+							<br />
+							B.Sc Biochemistry
+							<br />
+							<strong>November, 2017</strong>
+						</p>
+					</div>
+
+					<div class="certifications">
+						<h4>Certifications</h4>
+						<hr />
+						<p>
+							<strong>Algorithms and Data Structures </strong>
+							<br />
+							By FreeCodeCamp
+							<br />
+							<strong> 2023</strong>
+						</p>
+						<p>
+							<strong>Responsive Web Design </strong>
+							<br />
+							By FreeCodeCamp
+							<br />
+							<strong>2023</strong>
+						</p>
+					</div>
+
+					<div class="projects">
+						<h4>Projects</h4>
+						<hr />
+						<p>
+							See some selected projects
+							<a href="#projects" class="projects-link">here</a>
+						</p>
+					</div>
+				</section>
+			</div>
+
+			<div class="projects-container">
+				<section id="projects">
+					<h3>Projects</h3>
+				</section>
+			</div>
+
+			<div class="contact-container">
+				<section id="contact">
+					<h3>Contact</h3>
+				</section>
+			</div>
+		</main>
 		<!-- <main id="main">
 			<section class="profession">
 				<h2>Hello, I'm ABDULBASIT YUSUF</h2>
@@ -125,9 +280,9 @@
 				</div>
 			</section>
 		</main> -->
-		<!-- <footer id="footer">
+		<footer id="footer">
 			<p class="copyright">© 2023 Abdulbasit Yusuf</p>
-		</footer> -->
+		</footer>
 
 		<!-- LOADING SPINNER START -->
 		<!-- <div id="loading-spinner" title="Loading">🌀</div> -->
