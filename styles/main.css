@@ -1,0 +1,97 @@
+#main {
+	color: #1f2937;
+}
+
+.resume-container {
+	background-color: #fff;
+}
+
+.projects-container {
+	background-color: #e5e7eb;
+}
+
+#resume,
+#projects {
+	padding: 60px 0 0;
+}
+
+h3 {
+	font-size: 32px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.resume-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+.download-icon {
+	width: 20px;
+	height: 20px;
+}
+
+hr {
+	margin-bottom: 15px;
+}
+
+.career-summary {
+	padding-bottom: 20px;
+	text-align: justify;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+
+.skills img {
+	width: 50px;
+	height: auto;
+}
+
+.company-container {
+	margin-bottom: 20px;
+}
+
+.company-name {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.position {
+	margin-bottom: 5px;
+}
+
+.company-container ul {
+	padding-left: 20px;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+	.company-container {
+		width: 450px;
+	}
+
+	.experience-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
