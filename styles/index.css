@@ -58,31 +58,6 @@ a {
 }
 /* Grouping similar styles together ends */
 
-/* 
-
-
-.skills {
-	margin-bottom: 20px;
-}
-
-.skills p {
-	display: flex;
-	gap: 10px;
-}
-
-.experience {
-	margin-bottom: 20px;
-}
-
-.educations {
-	margin-bottom: 20px;
-}
-
-.projects-link {
-	color: black;
-	text-decoration: underline;
-} */
-
 @media screen and (min-width: 1024px) {
 	#skip-to-main-content:focus {
 		left: calc(50% - 512px);
