@@ -1,3 +1,9 @@
+document.addEventListener("DOM", (e) => {
+	e.preventDefault();
+	// Google Chrome requires returnValue to be set.
+	confirm("Do you want to leave");
+});
+
 // const themeToggler = document.getElementById("theme-icon");
 // const darkModeIcon = document.querySelector(".dark-mode-icon");
 // const lightModeIcon = document.querySelector(".light-mode-icon");
