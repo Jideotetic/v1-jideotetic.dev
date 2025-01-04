@@ -2,8 +2,11 @@ import { Link } from "react-router";
 import type { Route } from "./+types/home";
 import logo from "./JD.svg";
 import illustration from "./3d-illustration.png";
-
 import {
+  Description,
+  Dialog,
+  DialogPanel,
+  DialogTitle,
   Popover,
   PopoverBackdrop,
   PopoverButton,
@@ -13,12 +16,32 @@ import Nav from "~/components/nav";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Projects from "~/components/projects";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { useState } from "react";
+import QRCode from "qrcode";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "Abdulbasit Yusuf | Frontend Developer" }];
 }
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [qrCodeURL, setQrCodeURL] = useState("");
+
+  const handleClick = () => {
+    const whatsappLink = "https://wa.me/+2349014349835";
+
+    QRCode.toDataURL(
+      whatsappLink,
+      { errorCorrectionLevel: "H" },
+      (err: any, url: string) => {
+        if (err) return console.error(err);
+        setQrCodeURL(url);
+      }
+    );
+
+    setIsOpen(true);
+  };
   return (
     <div className="">
       <header className="p-4 bg-white shadow-gray-900 shadow-sm fixed left-0 right-0 z-50">
@@ -107,6 +130,29 @@ export default function Home() {
                 >
                   <FaLinkedin />
                 </Link>
+                <button onClick={handleClick} title="Connect on whatsapp">
+                  <IoLogoWhatsapp />
+                </button>
+                <Dialog
+                  open={isOpen}
+                  onClose={() => setIsOpen(false)}
+                  className="relative z-50"
+                >
+                  <div className="fixed inset-0 bg-black/50 flex w-screen items-center justify-center p-4">
+                    <DialogPanel className="max-w-lg space-y-4 border bg-white p-12 rounded">
+                      <DialogTitle className="font-bold">
+                        Scan QR code to connect with me on whatsapp
+                      </DialogTitle>
+                      <Description>
+                        <img
+                          src={qrCodeURL}
+                          alt="WhatsApp QR Code"
+                          className="mx-auto"
+                        />
+                      </Description>
+                    </DialogPanel>
+                  </div>
+                </Dialog>
               </div>
             </div>
 
@@ -261,6 +307,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="py-[112px] bg-gray-900" id="contact"></section>
     </div>
   );
 }
