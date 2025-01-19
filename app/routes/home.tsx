@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import type { Route } from "./+types/home";
 import logo from "./JD.svg";
 import illustration from "./3d-illustration.png";
@@ -27,6 +27,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [qrCodeURL, setQrCodeURL] = useState("");
+  const location = useLocation();
 
   const handleClick = () => {
     const whatsappLink = "https://wa.me/+2349014349835";
