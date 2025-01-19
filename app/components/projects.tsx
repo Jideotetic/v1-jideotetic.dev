@@ -1,26 +1,27 @@
-import { DiPostgresql } from "react-icons/di";
+import { DiMsqlServer } from "react-icons/di";
 import { FaCode, FaReact } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiReactrouter, SiRedux } from "react-icons/si";
+import { SiPrisma, SiReactrouter, SiRedux } from "react-icons/si";
 import { Fragment } from "react/jsx-runtime";
 
 const PROJECTS = [
   {
     title: "AccionMFB Policy Portal",
     stack: [
-      <FaReact />,
-      <RiTailwindCssFill />,
-      <RiNextjsFill />,
-      <DiPostgresql />,
+      <FaReact title="react" />,
+      <RiTailwindCssFill title="tailwinscss" />,
+      <RiNextjsFill title="nextjs" />,
+      <DiMsqlServer title="mssql" />,
+      <SiPrisma title="prisma" />,
     ],
     description: "AccionMFB policy platform",
   },
-  {
-    title: "TinkerPal Web",
-    stack: [<FaReact />, <RiTailwindCssFill />, <SiReactrouter />],
-    description: "Connecting devs with client",
-  },
+  // {
+  //   title: "TinkerPal Web",
+  //   stack: [<FaReact />, <RiTailwindCssFill />, <SiReactrouter />],
+  //   description: "Connecting devs with client",
+  // },
   {
     title: "Octopus Web",
     stack: [<FaReact />, <RiTailwindCssFill />, <RiNextjsFill />, <SiRedux />],
