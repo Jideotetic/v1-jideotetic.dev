@@ -23,6 +23,7 @@
   "devDependencies": {
     "@netlify/vite-plugin-react-router": "^1.0.0",
     "@react-router/dev": "^7.1.1",
+    "@types/express": "^5.0.0",
     "@types/node": "^20",
     "@types/qrcode": "^1.5.5",
     "@types/react": "^19.0.1",

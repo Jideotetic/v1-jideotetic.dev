@@ -1,9 +1,0 @@
-[build]
-
-command = "cross-env NODE_ENV=production react-router build"
-
-publish = "build/client"
-
-[dev]
-
-command = "react-router dev"
