@@ -1,46 +1,84 @@
+import type { ReactElement } from "react";
 import { DiMsqlServer } from "react-icons/di";
 import { FaCode, FaReact } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
+import { MdCss, MdHtml, MdJavascript } from "react-icons/md";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiPrisma, SiReactrouter, SiRedux } from "react-icons/si";
+import { Link } from "react-router";
 import { Fragment } from "react/jsx-runtime";
 
-const PROJECTS = [
+interface Project {
+  title: string;
+  stack: ReactElement[];
+  href?: string;
+  description: string;
+}
+
+const PROJECTS: Project[] = [
   {
     title: "AccionMFB Policy Portal",
     stack: [
-      <FaReact title="react" />,
-      <RiTailwindCssFill title="tailwinscss" />,
-      <RiNextjsFill title="nextjs" />,
-      <DiMsqlServer title="mssql" />,
-      <SiPrisma title="prisma" />,
+      <FaReact title="React" />,
+      <RiTailwindCssFill title="Tailwinscss" />,
+      <RiNextjsFill title="Nextjs" />,
+      <DiMsqlServer title="MSSQL" />,
+      <SiPrisma title="Prisma" />,
     ],
+    href: "",
     description: "AccionMFB policy platform",
   },
-  // {
-  //   title: "TinkerPal Web",
-  //   stack: [<FaReact />, <RiTailwindCssFill />, <SiReactrouter />],
-  //   description: "Connecting devs with client",
-  // },
+  {
+    title: "TinkerPal Web",
+    stack: [
+      <FaReact title="React" />,
+      <RiTailwindCssFill title="Tailwinscss" />,
+      <SiReactrouter title="React Router" />,
+    ],
+    description: "Connecting devs with client",
+    href: "",
+  },
   {
     title: "Octopus Web",
-    stack: [<FaReact />, <RiTailwindCssFill />, <RiNextjsFill />, <SiRedux />],
+    href: "http://apiv2.accionmfb.com:3000/",
+    stack: [
+      <FaReact title="React" />,
+      <RiTailwindCssFill title="Tailwinscss" />,
+      <RiNextjsFill title="Nextjs" />,
+      <SiRedux title="Redux" />,
+    ],
     description: "AccionMonie app dashboard",
   },
   {
     title: "v1.jideotetic.dev",
-    stack: [<FaReact />, <RiTailwindCssFill />, <SiReactrouter />],
+    stack: [
+      <FaReact title="React" />,
+      <RiTailwindCssFill title="Tailwinscss" />,
+      <RiNextjsFill title="Nextjs" />,
+      <SiReactrouter title="React Router" />,
+    ],
     description: "My portfolio website",
   },
   {
     title: "MathCollab",
+    href: "https://math-collab-alpha.vercel.app/",
     stack: [
-      <FaReact />,
-      <RiTailwindCssFill />,
-      <SiReactrouter />,
-      <IoLogoFirebase />,
+      <FaReact title="React" />,
+      <RiTailwindCssFill title="Tailwinscss" />,
+      <SiReactrouter title="React Router" />,
+      <IoLogoFirebase title="Firebase" />,
     ],
     description: "Math collaboration platform",
+  },
+  {
+    title: "Muzik",
+    href: "https://muzik-dun.vercel.app/",
+    stack: [
+      <MdHtml title="HTML5" />,
+      <MdCss title="CSS3" />,
+      <MdJavascript title="JavaScript" />,
+    ],
+    description: "JavaScript music player",
   },
 ];
 
@@ -60,7 +98,9 @@ export default function Projects() {
           key={id}
         >
           <FaCode className="mx-auto text-4xl" />
-          <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
+          <Link to={project.href!}>
+            <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
+          </Link>
           <div className="flex justify-center items-center gap-2 text-2xl">
             {project.stack.map((stack, id) => (
               <Fragment key={id}>{stack}</Fragment>
