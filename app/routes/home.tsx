@@ -17,8 +17,20 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Projects from "~/components/projects";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import QRCode from "qrcode";
+import { pdfjs } from "react-pdf";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url
+).toString();
+
+import { Document, Page } from "react-pdf";
+import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
+import { ImSpinner9 } from "react-icons/im";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "Abdulbasit Yusuf | Frontend Developer" }];
@@ -27,6 +39,39 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [qrCodeURL, setQrCodeURL] = useState("");
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
+  const [numPages, setNumPages] = useState<number>();
+  const [pageNumber, setPageNumber] = useState<number>(1);
+  const [pageWidth, setPageWidth] = useState<number>(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
+    setNumPages(numPages);
+  }
+
+  const goToNextPage = () => {
+    if (pageNumber < numPages!) {
+      setPageNumber(pageNumber + 1);
+    }
+  };
+
+  const goToPreviousPage = () => {
+    if (pageNumber > 1) {
+      setPageNumber(pageNumber - 1);
+    }
+  };
+
+  const updatePageWidth = useCallback(() => {
+    if (containerRef.current) {
+      setPageWidth(containerRef.current.offsetWidth);
+    }
+  }, []);
+
+  useEffect(() => {
+    updatePageWidth();
+    window.addEventListener("resize", updatePageWidth);
+    return () => window.removeEventListener("resize", updatePageWidth);
+  }, [updatePageWidth]);
 
   const handleClick = () => {
     const whatsappLink = "https://wa.me/+2349014349835";
@@ -44,7 +89,7 @@ export default function Home() {
   };
 
   return (
-    <div className={`${isOpen && "blur-sm"}`}>
+    <div className={`${(isOpen || isResumeOpen) && "blur-sm"}`}>
       <header className="p-4 bg-white shadow-gray-900 shadow-sm fixed left-0 right-0 z-50">
         <div className="lg:container mx-auto">
           <div className="flex items-center justify-between">
@@ -72,7 +117,7 @@ export default function Home() {
                     <>
                       <Nav close={close} />
                       <div className="flex">
-                        <a
+                        {/* <a
                           href="#"
                           title=""
                           onClick={() => close()}
@@ -80,7 +125,13 @@ export default function Home() {
                           role="button"
                         >
                           <span className="shrink-0">VIEW RESUME</span>
-                        </a>
+                        </a> */}
+                        <button
+                          onClick={() => setIsResumeOpen(true)}
+                          className="inline-flex items-center justify-center px-6 py-2 sm:py-2.5 text-base font-semibold text-white transition-all duration-200 bg-gray-900 rounded-lg sm:text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                        >
+                          VIEW RESUME
+                        </button>
                       </div>
                     </>
                   )}
@@ -93,14 +144,64 @@ export default function Home() {
             </div>
 
             <div className="hidden md:flex">
-              <a
-                href="#"
-                title=""
+              <button
+                onClick={() => setIsResumeOpen(true)}
                 className="inline-flex items-center justify-center px-6 py-2 sm:py-2.5 text-base font-semibold text-white transition-all duration-200 bg-gray-900 rounded-lg sm:text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-                role="button"
               >
-                <span className="shrink-0">VIEW RESUME</span>
-              </a>
+                VIEW RESUME
+              </button>
+              <Dialog
+                open={isResumeOpen}
+                transition
+                onClose={() => setIsResumeOpen(false)}
+                className="relative z-50 transition duration-300 ease-out data-[closed]:opacity-0"
+              >
+                <div className="fixed inset-0 bg-black/50 flex w-screen items-center justify-center p-4">
+                  <DialogPanel className="sm:min-w-[596px] h-full bg-white rounded scrollbar-hidden overflow-scroll flex flex-col justify-between items-center">
+                    <Document
+                      file="/Abdulbasit Yusuf's CV.pdf"
+                      onLoadSuccess={onDocumentLoadSuccess}
+                      loading={
+                        <div className="h-1/2 w-full border-2 border-red-500">
+                          <ImSpinner9 className="animate-spin text-gray-900 text-5xl" />
+                        </div>
+                      }
+                      error={<p>Failed to load</p>}
+                      className="h-full w-full border-2 border-red-500"
+                    >
+                      <Page
+                        pageNumber={pageNumber}
+                        width={pageWidth}
+                        scale={0.975}
+                        className="h-full border-2"
+                      />
+                    </Document>
+
+                    <div className="flex justify-evenly items-center w-full p-4">
+                      <p>
+                        Page {pageNumber} of {numPages}
+                      </p>
+
+                      <div className="flex gap-2">
+                        <button
+                          onClick={goToPreviousPage}
+                          disabled={pageNumber === 1}
+                          className="disabled:cursor-not-allowed inline-flex items-center justify-center px-6 py-2 sm:py-2.5 text-base font-semibold text-white transition-all duration-200 bg-gray-900 rounded-lg sm:text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                        >
+                          <GrLinkPrevious />
+                        </button>
+                        <button
+                          onClick={goToNextPage}
+                          disabled={pageNumber === numPages}
+                          className="disabled:cursor-not-allowed inline-flex items-center justify-center px-6 py-2 sm:py-2.5 text-base font-semibold text-white transition-all duration-200 bg-gray-900 rounded-lg sm:text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                        >
+                          <GrLinkNext />
+                        </button>
+                      </div>
+                    </div>
+                  </DialogPanel>
+                </div>
+              </Dialog>
             </div>
           </div>
         </div>
