@@ -156,7 +156,7 @@ export default function Home() {
                 onClose={() => setIsResumeOpen(false)}
                 className="relative z-50 transition duration-300 ease-out data-[closed]:opacity-0"
               >
-                <div className="fixed inset-0 bg-black/50 p-4">
+                <div className="fixed inset-0 bg-black/50 p-4 flex justify-center">
                   <DialogPanel className="h-full bg-white rounded scrollbar-hidden overflow-scroll flex flex-col justify-between items-center p-4 gap-3">
                     <Document
                       className="flex-grow w-full flex justify-center items-center"
@@ -250,13 +250,13 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* <div className="self-end md:col-span-6">
+              <div className="self-end md:col-span-6">
                 <img
                   className="w-full max-w-xs mx-auto"
                   src={illustration}
                   alt=""
                 />
-              </div> */}
+              </div>
             </div>
           </div>
         </section>
