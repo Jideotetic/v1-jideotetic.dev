@@ -1,0 +1,114 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link "Abdulbasit Yusuf home" [ref=e4] [cursor=pointer]:
+      - /url: "#top"
+      - text: AY.
+    - navigation "Main navigation" [ref=e5]:
+      - link "Work" [ref=e6] [cursor=pointer]:
+        - /url: "#work"
+      - link "About" [ref=e7] [cursor=pointer]:
+        - /url: "#about"
+      - link "Let's talk" [ref=e8] [cursor=pointer]:
+        - /url: "#contact"
+        - text: Let's talk ↗
+    - button "Switch to dark mode" [ref=e9] [cursor=pointer]:
+      - generic [aria-hidden] [ref=e10]: ☾
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - paragraph [ref=e14]: Available for select projects
+        - heading [level=1] [ref=e16]:
+          - text: Building for the
+          - emphasis [ref=e17]: web
+          - text: with purpose.
+        - paragraph [ref=e18]: I'm Abdulbasit Yusuf, a front-end developer turning ideas into fast, accessible, and delightful digital experiences.
+        - link "Explore my work" [ref=e19] [cursor=pointer]:
+          - /url: "#work"
+          - text: Explore my work
+          - generic [aria-hidden] [ref=e20]: ↓
+      - img "Abdulbasit Yusuf wearing sunglasses" [ref=e22]
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - paragraph [ref=e25]: 01 — Selected work
+        - heading [level=2] [ref=e26]:
+          - text: Some things I've
+          - emphasis [ref=e27]: built recently.
+      - generic [ref=e28]:
+        - article [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]: Web app / 2024
+            - generic [ref=e34]: $
+          - generic [ref=e35]:
+            - generic [ref=e36]:
+              - heading "Orbit Dashboard" [level=3] [ref=e37]
+              - paragraph [ref=e38]: A responsive analytics dashboard with a clear focus on the data.
+            - link "Discuss Orbit Dashboard project" [ref=e39] [cursor=pointer]:
+              - /url: "#contact"
+              - text: ↗
+        - article [ref=e40]:
+          - generic [ref=e41]: Landing page / 2024
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - heading "Good Ground" [level=3] [ref=e49]
+              - paragraph [ref=e50]: A warm, responsive landing page for a sustainable brand.
+            - link "Discuss Good Ground project" [ref=e51] [cursor=pointer]:
+              - /url: "#contact"
+              - text: ↗
+        - article [ref=e52]:
+          - generic [ref=e53]:
+            - generic [ref=e54]: Portfolio / 2023
+            - generic [ref=e55]: newrituals
+            - generic [ref=e56]: a magazine for slow living
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - heading "New Rituals" [level=3] [ref=e59]
+              - paragraph [ref=e60]: A polished editorial site with thoughtful typography and motion.
+            - link "Discuss New Rituals project" [ref=e61] [cursor=pointer]:
+              - /url: "#contact"
+              - text: ↗
+        - article [ref=e62]:
+          - generic [ref=e63]:
+            - img "Preview of the Abdulbasit Yusuf portfolio website" [ref=e64]
+            - generic [ref=e65]: Abdulbasit Yusuf / 2026
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - heading "Abdulbasit Yusuf" [level=3] [ref=e68]
+              - paragraph [ref=e69]: This portfolio — a responsive personal site built from scratch.
+            - link "View Abdulbasit Yusuf portfolio" [ref=e70] [cursor=pointer]:
+              - /url: "#top"
+              - text: ↗
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - paragraph [ref=e73]: 02 — A little about me
+        - heading [level=2] [ref=e74]:
+          - text: Always learning,
+          - emphasis [ref=e75]: always building.
+      - generic [ref=e76]:
+        - paragraph [ref=e77]: "I care about the details that make a big difference: clean interfaces, smooth interactions, and websites that feel great to use."
+        - paragraph [ref=e78]: I work across the front end to turn designs into reliable products, from the first component to the final responsive detail.
+        - generic [ref=e79]:
+          - generic [ref=e80]: HTML & CSS
+          - generic [ref=e81]: JavaScript
+          - generic [ref=e82]: React
+          - generic [ref=e83]: Responsive UI
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - paragraph [ref=e86]: 03 — Have a good one?
+        - heading [level=2] [ref=e87]:
+          - text: Let's build
+          - emphasis [ref=e88]: something great.
+      - generic [ref=e89]:
+        - paragraph [ref=e90]: Have a website in mind or just want to say hello? My inbox is always open.
+        - link "hello@abdulbasityusuf.dev ↗" [ref=e91] [cursor=pointer]:
+          - /url: mailto:hello@abdulbasityusuf.dev
+        - generic [ref=e92]:
+          - link "LinkedIn" [ref=e93] [cursor=pointer]:
+            - /url: https://www.linkedin.com
+          - link "GitHub" [ref=e94] [cursor=pointer]:
+            - /url: https://github.com
+          - link "Instagram" [ref=e95] [cursor=pointer]:
+            - /url: https://www.instagram.com
+  - contentinfo [ref=e96]:
+    - generic [ref=e97]: © 2026 Abdulbasit Yusuf
+    - link "Back to top ↑" [ref=e98] [cursor=pointer]:
+      - /url: "#top"
