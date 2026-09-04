@@ -78,26 +78,12 @@
 						<p class="eyebrow">01 — Selected work</p>
 						<h2>Some things I've<br /><em>built recently.</em></h2>
 					</div>
-					<div class="project-grid">
-						<article class="project-card reveal" data-project-card="1">
-							<div class="project-visual visual-portfolio">
-								<img
-									src="portfolio-preview.png"
-									alt="Preview of the Abdulbasit Yusuf portfolio website"
-								/>
-								<!-- <span class="visual-label">Abdulbasit Yusuf / 2026</span> -->
-							</div>
-							<div class="project-meta">
-								<div>
-									<h3>Abdulbasit Yusuf</h3>
-									<p>HTML · CSS · JavaScript</p>
-								</div>
-								<a href="#top" aria-label="View Abdulbasit Yusuf portfolio"
-									>↗</a
-								>
-							</div>
-						</article>
+					<div class="project-grid" id="github-projects" aria-live="polite">
+						<p class="projects-status">Loading projects from GitHub…</p>
 					</div>
+					<button class="next-projects" id="next-projects" type="button" hidden>
+						Next projects <span aria-hidden="true">→</span>
+					</button>
 				</section>
 
 				<section id="about" class="about section-block section-grid">
