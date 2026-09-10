@@ -72,10 +72,18 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: min(100%, 1440px);
+	transform: translateX(-50%);
 	z-index: 10;
-	padding: 2rem 0;
+	padding: 2rem 6vw;
+	background: var(--paper);
 	border-bottom: 1px solid var(--line);
+}
+main {
+	padding-top: 6rem;
 }
 .wordmark {
 	font-size: 1.4rem;
@@ -291,37 +299,56 @@ h2 em {
 	grid-column: 1 / -1;
 	color: var(--muted);
 	font-family: "DM Mono", monospace;
-	font-size: .75rem;
+	font-size: 0.75rem;
+}
+.project-pagination {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin-top: 3rem;
 }
 .next-projects {
-	margin: 3rem auto 0;
 	display: block;
-	padding: .9rem 1.4rem;
+	padding: 0.9rem 1.4rem;
 	border: 1px solid var(--ink);
 	background: transparent;
 	color: var(--ink);
-	font: 500 .75rem "DM Mono", monospace;
+	font:
+		500 0.75rem "DM Mono",
+		monospace;
 	text-transform: uppercase;
-	letter-spacing: .08em;
+	letter-spacing: 0.08em;
 	cursor: pointer;
-	transition: background .2s ease, color .2s ease;
+	transition:
+		background 0.2s ease,
+		color 0.2s ease;
 }
-.next-projects:hover,
-.next-projects:focus-visible {
+.next-projects:hover:not(:disabled),
+.next-projects:focus-visible:not(:disabled) {
 	background: var(--ink);
 	color: var(--paper);
+}
+.next-projects:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
 }
 .github-project .project-visual {
 	display: grid;
 	place-items: center;
 	background: var(--blue);
 }
-.github-project:nth-child(3n + 2) .project-visual { background: var(--coral); }
-.github-project:nth-child(3n + 3) .project-visual { background: var(--accent); }
+.github-project:nth-child(3n + 2) .project-visual {
+	background: var(--coral);
+}
+.github-project:nth-child(3n + 3) .project-visual {
+	background: var(--accent);
+}
 .github-project .repo-mark {
 	color: var(--ink);
-	font: 700 clamp(3rem, 10vw, 8rem) "DM Mono", monospace;
-	letter-spacing: -.12em;
+	font:
+		700 clamp(3rem, 10vw, 8rem) "DM Mono",
+		monospace;
+	letter-spacing: -0.12em;
 }
 .github-project .visual-label {
 	color: var(--ink);
@@ -343,6 +370,21 @@ h2 em {
 	height: 330px;
 	border: 1px solid var(--line);
 	overflow: hidden;
+}
+.project-preview {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.project-visual-preview::after {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.32), transparent 45%);
+	content: "";
+}
+.project-visual-preview .visual-label {
+	color: #fff;
 }
 .project-card-large .project-visual {
 	height: 690px;
@@ -460,7 +502,7 @@ h2 em {
 .visual-portfolio .visual-label {
 	z-index: 1;
 	color: var(--paper);
-	text-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 .code-mark {
 	position: absolute;
@@ -477,9 +519,18 @@ h2 em {
 	height: 1px;
 	background: var(--coral);
 }
-.code-line-one { top: 28%; width: 32%; }
-.code-line-two { top: 72%; width: 44%; }
-.code-line-three { top: 78%; width: 22%; }
+.code-line-one {
+	top: 28%;
+	width: 32%;
+}
+.code-line-two {
+	top: 72%;
+	width: 44%;
+}
+.code-line-three {
+	top: 78%;
+	width: 22%;
+}
 .project-meta {
 	display: flex;
 	align-items: flex-start;
@@ -502,20 +553,39 @@ h2 em {
 .project-meta > a:hover {
 	transform: translate(4px, -4px);
 }
-.about {
+.experience {
 	align-items: start;
 }
-.about-copy {
+.experience-list {
 	max-width: 540px;
 	padding-top: 3.5rem;
 }
-.about-lead {
-	font-size: 1.65rem;
-	letter-spacing: -0.04em;
-	line-height: 1.25;
+.experience-item {
+	padding: 0 0 2rem;
+	border-bottom: 1px solid var(--line);
 }
-.about-copy > p:not(.about-lead) {
+.experience-item + .experience-item {
+	padding-top: 2rem;
+}
+.experience-heading {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 1rem;
+}
+.experience-heading h3 {
+	margin: 0;
+	font-size: 1.1rem;
+}
+.experience-heading span,
+.experience-role {
 	color: var(--muted);
+	font-family: "DM Mono", monospace;
+	font-size: 0.68rem;
+}
+.experience-role {
+	margin: 0.4rem 0 0;
+	text-transform: uppercase;
 }
 .skills {
 	display: flex;
@@ -606,10 +676,9 @@ html.reveal-ready .reveal:not(.visible) {
 		padding: 0 1.25rem;
 	}
 	.site-header {
-		position: sticky;
+		position: fixed;
 		top: 0;
 		padding: 1.25rem 0;
-		background: var(--paper);
 	}
 	.menu-toggle {
 		z-index: 2;
@@ -675,7 +744,7 @@ html.reveal-ready .reveal:not(.visible) {
 		transition: transform 0.2s ease;
 	}
 	.hero,
-	.about,
+	.experience,
 	.contact {
 		grid-template-columns: 1fr;
 	}
@@ -709,7 +778,7 @@ html.reveal-ready .reveal:not(.visible) {
 	.project-visual {
 		height: 390px;
 	}
-	.about-copy {
+	.experience-list {
 		padding-top: 0;
 	}
 	.contact {

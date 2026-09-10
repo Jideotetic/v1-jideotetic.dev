@@ -3,87 +3,123 @@ const siteNav = document.querySelector(".site-nav");
 const year = document.querySelector("#year");
 const themeToggle = document.querySelector(".theme-toggle");
 const themeIcon = document.querySelector(".theme-icon");
-const projectsContainer = document.querySelector("#github-projects");
+const projectsContainer = document.querySelector("#projects");
+const previousProjectsButton = document.querySelector("#prev-projects");
 const nextProjectsButton = document.querySelector("#next-projects");
 if (year) {
 	year.textContent = new Date().getFullYear();
 }
 
-const githubUsername = "jideotetic";
 const projectsPerPage = 3;
-let githubProjects = [];
 let projectPage = 0;
 
-const createProjectCard = (repository, index) => {
+const projects = [
+	{
+		name: "Personal Portfolio",
+		description: "A thoughtful portfolio for showcasing selected work and experience.",
+		language: "HTML / CSS / JavaScript",
+		html_url: "https://github.com/Jideotetic/portfolio",
+		image: "portfolio-preview.png",
+	},
+	{
+		name: "Sorograph Dashboard",
+		description: "A dashboard for exploring and visualising graph data.",
+		language: "TypeScript",
+		html_url: "https://github.com/Jideotetic/sorograph-dashboard",
+	},
+	{
+		name: "ErrandGo",
+		description: "A web application for organising and completing errands.",
+		language: "TypeScript",
+		html_url: "https://github.com/Jideotetic/errandgo-web-app",
+	},
+	{
+		name: "Home Veer Realities",
+		description: "A modern real-estate experience for discovering homes.",
+		language: "TypeScript",
+		html_url: "https://github.com/Jideotetic/home-veer-realities",
+	},
+	{
+		name: "LiquidsFi Explorer",
+		description: "An interface for exploring LiquidsFi data.",
+		language: "JavaScript",
+		html_url: "https://github.com/Jideotetic/liquidsfi-explorer",
+	},
+	{
+		name: "CV Builder",
+		description: "A focused tool for creating and updating a CV.",
+		language: "TypeScript",
+		html_url: "https://github.com/Jideotetic/cv-builder",
+	},
+	{
+		name: "MathCollab",
+		description: "A collaborative space for working through mathematics.",
+		language: "TypeScript",
+		html_url: "https://github.com/Jideotetic/MathCollab",
+	},
+];
+
+const createProjectCard = (project, index) => {
 	const card = document.createElement("article");
 	card.className = `project-card github-project reveal visible${index === 0 ? " project-card-large" : ""}`;
 
 	const visual = document.createElement("div");
-	visual.className = "project-visual";
+	visual.className = `project-visual${project.image ? " project-visual-preview" : ""}`;
+	if (project.image) {
+		const preview = document.createElement("img");
+		preview.className = "project-preview";
+		preview.src = project.image;
+		preview.alt = `${project.name} preview`;
+		visual.append(preview);
+	}
 	const label = document.createElement("span");
 	label.className = "visual-label";
-	label.textContent = `${repository.language || "Front-end"} / GitHub`;
-	const mark = document.createElement("span");
-	mark.className = "repo-mark";
-	mark.textContent = "</>";
-	visual.append(label, mark);
+	label.textContent = `${project.language || "Front-end"} / Project`;
+	visual.append(label);
+	if (!project.image) {
+		const mark = document.createElement("span");
+		mark.className = "repo-mark";
+		mark.textContent = "</>";
+		visual.append(mark);
+	}
 
 	const meta = document.createElement("div");
 	meta.className = "project-meta";
 	const info = document.createElement("div");
 	const title = document.createElement("h3");
-	title.textContent = repository.name;
+	title.textContent = project.name;
 	const description = document.createElement("p");
 	description.textContent =
-		repository.description || "A project built by Abdulbasit Yusuf.";
+		project.description || "A project built by Abdulbasit Yusuf.";
 	info.append(title, description);
 	const link = document.createElement("a");
-	link.href = repository.html_url;
+	link.href = project.html_url;
 	link.target = "_blank";
 	link.rel = "noreferrer";
-	link.setAttribute("aria-label", `View ${repository.name} on GitHub`);
+	link.setAttribute("aria-label", `View ${project.name} on GitHub`);
 	link.textContent = "↗";
 	meta.append(info, link);
 	card.append(visual, meta);
 	return card;
 };
 
-const loadGithubProjects = async () => {
-	if (!projectsContainer) return;
-	try {
-		const response = await fetch("/api/projects");
-		if (!response.ok)
-			throw new Error(`GitHub request failed with status ${response.status}`);
-		const repositories = await response.json();
-
-		githubProjects = repositories
-			.filter((repository) => !repository.fork)
-		if (!githubProjects.length) throw new Error("No public repositories found");
-		renderProjectPage();
-	} catch (error) {
-		const status = document.createElement("p");
-		status.className = "projects-status";
-		status.textContent =
-			"Projects are currently unavailable. View my work on GitHub instead.";
-		const profileLink = document.createElement("a");
-		profileLink.href = `https://github.com/${githubUsername}`;
-		profileLink.target = "_blank";
-		profileLink.rel = "noreferrer";
-		profileLink.textContent = " Open GitHub profile ↗";
-		status.append(profileLink);
-		projectsContainer.replaceChildren(status);
-		console.error("Unable to load GitHub projects.", error);
-	}
-};
-
 const renderProjectPage = () => {
 	const start = projectPage * projectsPerPage;
-	const projects = githubProjects.slice(start, start + projectsPerPage);
-	projectsContainer.replaceChildren(...projects.map(createProjectCard));
+	const visibleProjects = projects.slice(start, start + projectsPerPage);
+	projectsContainer?.replaceChildren(...visibleProjects.map(createProjectCard));
+	if (previousProjectsButton) {
+		previousProjectsButton.disabled = projectPage === 0;
+	}
 	if (nextProjectsButton) {
-		nextProjectsButton.hidden = start + projectsPerPage >= githubProjects.length;
+		nextProjectsButton.disabled = start + projectsPerPage >= projects.length;
 	}
 };
+
+previousProjectsButton?.addEventListener("click", () => {
+	projectPage -= 1;
+	renderProjectPage();
+	document.querySelector("#work")?.scrollIntoView({ behavior: "smooth" });
+});
 
 nextProjectsButton?.addEventListener("click", () => {
 	projectPage += 1;
@@ -91,7 +127,7 @@ nextProjectsButton?.addEventListener("click", () => {
 	document.querySelector("#work")?.scrollIntoView({ behavior: "smooth" });
 });
 
-loadGithubProjects();
+renderProjectPage();
 
 let savedTheme = null;
 try {
